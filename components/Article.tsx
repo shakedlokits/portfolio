@@ -9,7 +9,7 @@ export const Article = ({ entry }: { entry: FeedEntry<any> }) => {
     logger.info({imageUrl, formattedDate});
     
   return (
-    <div className="flex flex-col justify-center max-w-xs gap-3">
+    <div className="flex flex-col justify-center gap-3 break-inside-avoid-column mb-4">
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
       <h1 className="text-lg leading-tight font-bold text-center">{entry.title}</h1>
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />

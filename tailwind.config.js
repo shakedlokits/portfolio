@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      columns: {
+        '4xs': '11.5rem',
+      },
       fontSize: {
         'xs': '0.5rem'
       },
@@ -13,7 +16,8 @@ module.exports = {
         'tight': '1.2',
       },
       maxWidth: {
-        'xs': '18.75rem',
+        'xs': '18.75rem',  
+        '3xl': '50.75rem',    
       }
     },
     fontFamily: {
