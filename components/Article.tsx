@@ -13,7 +13,9 @@ const Article = ({ entry }: { entry: FeedEntry<any> }) => {
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
       <h1 className="text-lg leading-tight font-bold text-center">{entry.title}</h1>
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
-      <p className="text-base leading-none max-h-36 text-ellipsis overflow-hidden text-justify">{entry.snippet}</p>
+      <p className="text-base indent-3 leading-none sm:max-h-36 max-h-16 overflow-ellipsis overflow-hidden text-justify">
+        {entry.snippet}
+      </p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       {imageUrl && <img className="w-full" src={imageUrl} alt={entry.title} />}
       <span className="text-xs font-bold text-right uppercase">{formattedDate}</span>
