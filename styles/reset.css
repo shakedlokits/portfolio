@@ -46,3 +46,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* Importing base styles for tailwind */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
