@@ -31,8 +31,6 @@
 
 body {
   font-family: 'Junicode', sans-serif;
-  font-size: 12px;
-  line-height: 1;
 }
 
 @layer utilities {

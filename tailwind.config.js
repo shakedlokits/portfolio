@@ -10,6 +10,7 @@ module.exports = {
         '4xs': '11.5rem',
       },
       fontSize: {
+        'base': '0.75rem',
         'xs': '0.5rem'
       },
       lineHeight: {
