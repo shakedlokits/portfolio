@@ -34,3 +34,9 @@ body {
   font-size: 12px;
   line-height: 1;
 }
+
+@layer utilities {
+  .columns-rule {
+    column-rule: 2px solid black;
+  }
+}
