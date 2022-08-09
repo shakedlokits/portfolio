@@ -2,6 +2,7 @@ import { DataProps } from '../lib/data-fetcher';
 import { ArticleList } from '../components/Article';
 import { Header } from '../components/Header';
 import { Title } from '../components/Title';
+import { Footer } from '../components/Footer';
 
 export { getServerSideProps } from '../lib/data-fetcher';
 
@@ -13,6 +14,7 @@ const Home = ({ projects, works, articles }: DataProps) => {
       <Title />
       <Header />
       <ArticleList entries={entries} />
+      <Footer />
     </div>
   );
 };

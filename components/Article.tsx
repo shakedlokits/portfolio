@@ -1,5 +1,6 @@
 import { useLogger } from '../lib/logger';
 import { FeedEntry } from '../lib/rss-service';
+import { Link } from './Link';
 import { format } from 'date-fns';
 
 const Article = ({ entry }: { entry: FeedEntry<any> }) => {
@@ -11,7 +12,9 @@ const Article = ({ entry }: { entry: FeedEntry<any> }) => {
   return (
     <article className="flex flex-col justify-center gap-3 break-inside-avoid-column mb-4">
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
-      <h2 className="text-lg leading-tight font-bold text-center">{entry.title}</h2>
+      <h2 className="text-lg leading-tight font-bold text-center">
+        <Link href={entry.link}>{entry.title}</Link>
+      </h2>
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
       <p className="text-base indent-3 leading-none line-clamp-4 text-justify">{entry.snippet}</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
