@@ -10,21 +10,21 @@
   font-family: 'Junicode';
   font-style: normal;
   font-weight: 400;
-  src: local(''), url('/fonts/Junicode.ttf') format('ttf');
+  src: url('/fonts/Junicode.ttf');
 }
 
 @font-face {
   font-family: 'Junicode';
   font-style: bold;
   font-weight: 600;
-  src: local(''), url('/fonts/Junicode-Bold.ttf') format('ttf');
+  src: url('/fonts/Junicode-Bold.ttf');
 }
 
 @font-face {
   font-family: 'YoungSerif';
   font-style: normal;
   font-weight: 400;
-  src: local(''), url('/fonts/YoungSerif-Regular.otf') format('otf');
+  src: url('/fonts/YoungSerif-Regular.otf');
 }
 
 /* Custom styles */
