@@ -37,4 +37,25 @@ body {
   .columns-rule {
     column-rule: 2px solid black;
   }
+
+  .hightlight {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hightlight::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 60%;
+    top: 32px;
+    left: 16px;
+    background: #FDFF9B;
+    z-index: -1;
+  }
 }
+
+.Typewriter {
+  display: inline;
+}
+

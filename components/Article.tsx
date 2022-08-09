@@ -9,17 +9,15 @@ const Article = ({ entry }: { entry: FeedEntry<any> }) => {
   logger.info({ imageUrl, formattedDate });
 
   return (
-    <div className="flex flex-col justify-center gap-3 break-inside-avoid-column mb-4">
+    <article className="flex flex-col justify-center gap-3 break-inside-avoid-column mb-4">
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
-      <h1 className="text-lg leading-tight font-bold text-center">{entry.title}</h1>
+      <h2 className="text-lg leading-tight font-bold text-center">{entry.title}</h2>
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
-      <p className="text-base indent-3 leading-none sm:max-h-36 max-h-16 overflow-ellipsis overflow-hidden text-justify">
-        {entry.snippet}
-      </p>
+      <p className="text-base indent-3 leading-none line-clamp-4 text-justify">{entry.snippet}</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       {imageUrl && <img className="w-full" src={imageUrl} alt={entry.title} />}
       <span className="text-xs font-bold text-right uppercase">{formattedDate}</span>
-    </div>
+    </article>
   );
 };
 

@@ -25,7 +25,7 @@ export const Header = () => {
         <MenuIcon />
         <p className="inline align-bottom ml-1">Menu</p>
       </div>
-      <div className="text-[1rem] uppercase pr-2">
+      <div className="text-[1rem] uppercase">
         <p className="sm:inline hidden">{day}</p>
         <p className="inline">{date}</p>
       </div>
