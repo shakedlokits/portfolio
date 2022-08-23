@@ -1,8 +1,7 @@
 import { FeedEntry, FeedType } from '../lib/rss-service';
 import { Link } from './Link';
 import { format } from 'date-fns';
-
-const titleCase = (s: string) => s.replace (/^[-_]*(.)/, (_, c) => c.toUpperCase()).replace (/[-_]+(.)/g, (_, c) => ' ' + c.toUpperCase())
+import { titleCase } from '../lib/utilities';
 
 const formatDate = (entry: FeedEntry<any>) => format(new Date(entry.date), 'MMMM do, yyyy');
 

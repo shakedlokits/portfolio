@@ -3,11 +3,12 @@ import { ArticleList } from '../components/Article';
 import { Header } from '../components/Header';
 import { Title } from '../components/Title';
 import { Footer } from '../components/Footer';
+import { shuffleEntries } from '../lib/utilities';
 
 export { getServerSideProps } from '../lib/data-fetcher';
 
 const Home = ({ projects, works, articles }: DataProps) => {
-  const entries = [...articles, ...works, ...projects].sort((a, b) => a.title > b.title ? 1 : -1).reverse();
+  const entries = shuffleEntries([...articles, ...works, ...projects]);
 
   return (
     <div className="container mx-auto max-w-3xl px-9 pt-24">
