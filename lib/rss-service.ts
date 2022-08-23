@@ -58,15 +58,15 @@ export const getBahanceWorks = async (): Promise<FeedEntry<FeedType.Behance>[]> 
     const feed = await parser.parseString(xml);
 
     return feed.items.map(
-        (item) =>
-            ({
-              title: item['title'],
-              content: item['content'],
-              snippet: item['contentSnippet'],
-              date: item['isoDate'],
-              link: item['link'],
-              type: FeedType.Behance,
-            } as FeedEntry<FeedType.Behance>)
+      (item) =>
+        ({
+          title: item['title'],
+          content: item['content'],
+          snippet: item['contentSnippet'],
+          date: item['isoDate'],
+          link: item['link'],
+          type: FeedType.Behance,
+        } as FeedEntry<FeedType.Behance>)
     );
   } catch (error) {
     logger.error(error, 'Failed to fetch works from behance');
@@ -78,20 +78,22 @@ export const getGithubProjects = async (): Promise<FeedEntry<FeedType.Github>[]>
   if (!process.env.GITHUB_USERNAME) return [];
 
   try {
-    const response = await fetch(`https://rsshub.app/github/repos/${process.env.GITHUB_USERNAME}`);
-    const xml = await response.text();
-    const feed = await parser.parseString(xml);
+    const response = await fetch(`https://api.github.com/users/${process.env.GITHUB_USERNAME}/repos`);
+    const json = await response.json();
+    const repositories = json.filter(
+      (repo: any) => repo.archived === false && repo.fork === false && repo.visibility === 'public'
+    );
 
-    return feed.items.map(
-        (item) =>
-            ({
-              title: item['title'],
-              content: item['content'],
-              snippet: item['contentSnippet'],
-              date: item['isoDate'],
-              link: item['link'],
-              type: FeedType.Github,
-            } as FeedEntry<FeedType.Github>)
+    return repositories.map(
+      (item: any) =>
+        ({
+          title: item['name'],
+          content: item['description'],
+          snippet: item['description'],
+          date: item['created_at'],
+          link: item['html_url'],
+          type: FeedType.Github,
+        } as FeedEntry<FeedType.Github>)
     );
   } catch (error) {
     logger.error(error, 'Failed to fetch projects from github');
