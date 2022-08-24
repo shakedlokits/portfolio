@@ -1,6 +1,6 @@
 import { Title } from '../components/Title';
 import { Footer } from '../components/Footer';
-import me from '../public/me.jpg';
+import me from '../public/image/me.jpg';
 import Image from 'next/image'
 
 const About = () => {
