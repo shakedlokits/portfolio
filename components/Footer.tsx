@@ -16,12 +16,12 @@ export const Footer = () => (
     <p className="text-base">
       Built using{' '}
       <span className="font-bold">
-        <Link href="https://github.com/shakedlokits/yet-another-portfolio-boilerplate">
+        <Link href="https://github.com/shakedlokits/yet-another-portfolio-boilerplate" redirect>
           yet another portfolio boilerplate.
         </Link>
       </span>
     </p>
-    <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" redirect>
       <GiftIcon />
     </Link>
   </footer>

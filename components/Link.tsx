@@ -1,8 +1,10 @@
 import type { PropsWithChildren } from 'react';
 
-export const Link = ({ href, children }: PropsWithChildren<{ href: string }>) => {
+export const buttonStyle = 'decoration-yellow-200 decoration-double decoration-2 hover:underline';
+
+export const Link = ({ href, redirect, children }: PropsWithChildren<{ href: string, redirect?: boolean }>) => {
   return (
-    <a className="decoration-yellow-200 decoration-double decoration-2 hover:underline" href={href} target="_blank"  rel="noreferrer">
+    <a className={buttonStyle} href={href} target={redirect ? "_blank" : undefined}  rel="noreferrer">
       {children}
     </a>
   );

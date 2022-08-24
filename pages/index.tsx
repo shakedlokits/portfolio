@@ -12,7 +12,7 @@ const Home = ({ projects, works, articles }: DataProps) => {
 
   return (
     <div className="container mx-auto max-w-3xl px-9 pt-24">
-      <Title />
+      <Title funny />
       <Header />
       <ArticleList entries={entries} />
       <Footer />
