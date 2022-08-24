@@ -2,6 +2,7 @@ import format from 'date-fns/format';
 import { Link } from './Link';
 import { useState } from 'react';
 import { useWttr } from '../lib/use-wttr';
+import { useCity } from '../lib/use-city';
 
 const MenuIcon = () => (
   <svg
@@ -19,7 +20,8 @@ const MenuIcon = () => (
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const weather = useWttr();
-  const day = `Tel Aviv, ${format(new Date(), 'eeee')}, `;
+  const city = useCity();
+  const day = `${city}, ${format(new Date(), 'eeee')}, `;
   const date = format(new Date(), 'MMMM d, yyyy');
 
   return (
