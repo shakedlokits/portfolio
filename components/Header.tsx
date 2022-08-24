@@ -1,6 +1,6 @@
 import format from 'date-fns/format';
 import { Link } from './Link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useWttr } from '../lib/use-wttr';
 import { useCity } from '../lib/use-city';
 
@@ -19,8 +19,19 @@ const MenuIcon = () => (
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [city, setCity] = useState<string>('Tel Aviv');
+
+  useEffect(() => {
+    const fetchLocation = async () => {
+      const res = await fetch('http://ip-api.com/json');
+      const data = await res.json();
+      setCity(data.city);
+    };
+    fetchLocation();
+  }, []);
+
   const weather = useWttr();
-  const city = useCity();
   const day = `${city}, ${format(new Date(), 'eeee')}, `;
   const date = format(new Date(), 'MMMM d, yyyy');
 
