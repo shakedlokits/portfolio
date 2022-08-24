@@ -5,7 +5,7 @@ import { Title } from '../components/Title';
 import { Footer } from '../components/Footer';
 import { shuffleEntries } from '../lib/utilities';
 
-export { getServerSideProps } from '../lib/data-fetcher';
+export { getStaticProps } from '../lib/data-fetcher';
 
 const Home = ({ projects, works, articles }: DataProps) => {
   const entries = shuffleEntries([...articles, ...works, ...projects]);
