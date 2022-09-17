@@ -8,7 +8,7 @@ import { shuffleEntries } from '../lib/utilities';
 export { getStaticProps } from '../lib/data-fetcher';
 
 const Home = ({ projects, works, articles }: DataProps) => {
-  const entries = shuffleEntries([...articles, ...works, ...projects]);
+  const entries = shuffleEntries([...articles, ...works, ...projects]).filter((e) => !e.title.includes('portfolio'));
 
   return (
     <div className="container mx-auto max-w-3xl px-9 pt-24">
