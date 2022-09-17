@@ -74,6 +74,13 @@ export const getBahanceWorks = async (): Promise<FeedEntry<FeedType.Behance>[]> 
   }
 };
 
+const getReadmeContent = async (repositoryName: string): Promise<string> => {
+  const response = await fetch(`https://api.github.com/repos/${process.env.GITHUB_USERNAME}/${repositoryName}/readme`);
+  const json = await response.json();
+
+  return Buffer.from(json['content'], 'base64').toString();
+};
+
 export const getGithubProjects = async (): Promise<FeedEntry<FeedType.Github>[]> => {
   if (!process.env.GITHUB_USERNAME) return [];
 
@@ -84,16 +91,18 @@ export const getGithubProjects = async (): Promise<FeedEntry<FeedType.Github>[]>
       (repo: any) => repo.archived === false && repo.fork === false && repo.visibility === 'public'
     );
 
-    return repositories.map(
-      (item: any) =>
-        ({
-          title: item['name'],
-          content: item['description'],
-          snippet: item['description'],
-          date: item['created_at'],
-          link: item['html_url'],
-          type: FeedType.Github,
-        } as FeedEntry<FeedType.Github>)
+    return Promise.all(
+      repositories.map(
+        async (item: any) =>
+          ({
+            title: item['name'],
+            content: await getReadmeContent(item['name']),
+            snippet: item['description'],
+            date: item['created_at'],
+            link: item['html_url'],
+            type: FeedType.Github,
+          } as FeedEntry<FeedType.Github>)
+      )
     );
   } catch (error) {
     logger.error(error, 'Failed to fetch projects from github');
