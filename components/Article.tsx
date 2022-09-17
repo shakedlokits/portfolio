@@ -6,7 +6,7 @@ import { titleCase } from '../lib/utilities';
 const formatDate = (entry: FeedEntry<any>) => format(new Date(entry.date), 'MMMM do, yyyy');
 
 const formatImageUrl = (entry: FeedEntry<any>) => {
-  const contentImage = entry.content.match(/(http)?s?:?(\/\/[^"']*?\.(?:png|jpg|jpeg|gif|png|svg))/)?.[0];
+  const contentImage = entry.content.match(/(http)?s?:?(\/\/[^"']*?\.(?:png|jpg|jpeg|gif|png))/)?.[0];
 
   if (entry.type === FeedType.Github && !contentImage) {    
     return `https://opengraph.githubassets.com/master/shakedlokits/${entry.title}`;
