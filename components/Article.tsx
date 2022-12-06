@@ -29,7 +29,7 @@ const Article = ({ entry }: { entry: FeedEntry<any> }) => {
         <Link href={entry.link} redirect>{title}</Link>
       </h2>
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
-      <p className="text-base indent-3 leading-none line-clamp-4 text-justify">{entry.snippet}</p>
+      <p className="text-base indent-3 leading-none line-clamp-5 text-justify">{entry.snippet}</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       {image && <img className="w-full" src={image} alt={entry.title} />}
       <span className="text-xs font-bold text-right uppercase">{date}</span>

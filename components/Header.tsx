@@ -23,7 +23,7 @@ export const Header = () => {
   const date = format(new Date(), 'MMMM d, yyyy');
 
   return (
-    <header className="flex flex-row justify-between border-black border-b-4 border-t-2 py-1 mb-8">
+    <header className={`transition ease-in-out delay-200 ${isMenuOpen ? 'bg-[#FDFF9B]' : ''} flex flex-row justify-between border-black border-b-4 border-t-2 py-1 mb-8`}>
       <button className="text-[1rem] font-bold pr-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <MenuIcon />
         <p className="inline align-bottom ml-1">{isMenuOpen ? 'Close' : 'Menu'}</p>
