@@ -6,7 +6,7 @@ import { FeedEntry, FeedType } from './sources';
 const parser = new Parser();
 const logger = createLogger('rss-service');
 
-export const getMediumArticles = async (): Promise<FeedEntry<FeedType.Medium>[]> => {
+export const getMediumArticles = async (): Promise<(FeedEntry & { type: FeedType.Medium })[]> => {
   if (!process.env.MEDIUM_USERNAME) return [];
 
   try {
@@ -28,7 +28,7 @@ export const getMediumArticles = async (): Promise<FeedEntry<FeedType.Medium>[]>
           date: item['isoDate'],
           link: item['link'],
           type: FeedType.Medium,
-        } as FeedEntry<FeedType.Medium>)
+        } as FeedEntry & { type: FeedType.Medium })
     );
   } catch (error) {
     logger.error(error, 'Failed to fetch articles from medium');
@@ -43,7 +43,7 @@ const getReadmeContent = async (repositoryName: string): Promise<string> => {
   return Buffer.from(json['content'], 'base64').toString();
 };
 
-export const getGithubProjects = async (): Promise<FeedEntry<FeedType.Github>[]> => {
+export const getGithubProjects = async (): Promise<(FeedEntry & { type: FeedType.Github })[]> => {
   if (!process.env.GITHUB_USERNAME) return [];
 
   try {
@@ -63,7 +63,7 @@ export const getGithubProjects = async (): Promise<FeedEntry<FeedType.Github>[]>
             date: item['created_at'],
             link: item['html_url'],
             type: FeedType.Github,
-          } as FeedEntry<FeedType.Github>)
+          } as FeedEntry & { type: FeedType.Github })
       )
     );
   } catch (error) {

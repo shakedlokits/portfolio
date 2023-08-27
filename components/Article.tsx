@@ -3,9 +3,9 @@ import { Link } from './Link';
 import { format } from 'date-fns';
 import { titleCase } from '../lib/utilities';
 
-const formatDate = (entry: FeedEntry<any>) => format(new Date(entry.date), 'MMMM do, yyyy');
+const formatDate = (entry: FeedEntry) => format(new Date(entry.date), 'MMMM do, yyyy');
 
-const formatImageUrl = (entry: FeedEntry<any>) => {
+const formatImageUrl = (entry: FeedEntry) => {
   if (entry.cover) return entry.cover;
 
   const contentImage = entry.content.match(/(http)?s?:?(\/\/[^"']*?\.(?:png|jpg|jpeg|gif|png))/)?.[0];
@@ -17,11 +17,11 @@ const formatImageUrl = (entry: FeedEntry<any>) => {
   return contentImage;
 }
 
-const formatTitle = (entry: FeedEntry<any>) => entry.type === FeedType.Github ? titleCase(entry.title) : entry.title;
+const formatTitle = (entry: FeedEntry) => entry.type === FeedType.Github ? titleCase(entry.title) : entry.title;
 
-const formatSource = (entry: FeedEntry<any>) => Object.keys(FeedType)[Object.values(FeedType).indexOf(entry.type)]
+const formatSource = (entry: FeedEntry) => Object.keys(FeedType)[Object.values(FeedType).indexOf(entry.type)]
 
-const Article = ({ entry }: { entry: FeedEntry<any> }) => {
+const Article = ({ entry }: { entry: FeedEntry }) => {
   const image = formatImageUrl(entry);
   const date = formatDate(entry);
   const title = formatTitle(entry);
@@ -46,7 +46,7 @@ const Article = ({ entry }: { entry: FeedEntry<any> }) => {
   );
 };
 
-export const ArticleList = ({ entries }: { entries: FeedEntry<any>[] }) => {
+export const ArticleList = ({ entries }: { entries: FeedEntry[] }) => {
   return (
     <div className="xl:columns-3 columns-1 md:columns-2 gap-6 columns-rule">
       {entries.map((entry, index) => (

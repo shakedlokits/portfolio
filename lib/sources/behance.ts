@@ -94,11 +94,11 @@ export const getBehanceWorks = async () => {
           snippet: description,
           cover: covers['808'],
           type: FeedType.Behance
-        } satisfies FeedEntry<FeedType.Behance>;
+        } satisfies (FeedEntry & {type: FeedType.Behance}) as (FeedEntry & {type: FeedType.Behance});
       })
     );
   
-    return works.filter((w): w is FeedEntry<FeedType.Behance> => Boolean(w));
+    return works.filter((w): w is (FeedEntry & {type: FeedType.Behance}) => Boolean(w));
   } catch (error) {
     logger.error(error, 'Failed to fetch works from behance');
     return [];

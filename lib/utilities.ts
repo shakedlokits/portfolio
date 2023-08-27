@@ -17,7 +17,7 @@ const hashString = (s: string) => {
   return hash;
 };
 
-export const shuffleEntries = (entries: FeedEntry<any>[]) =>
+export const shuffleEntries = (entries: FeedEntry[]) =>
   entries.sort((a, b) => hashString(a.title) - hashString(b.title));
 
 export const cacheOperation = async <T extends (...args: any[]) => Promise<string>, U extends Parameters<T>>({

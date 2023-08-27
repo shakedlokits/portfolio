@@ -37,7 +37,7 @@ export const getStaticProps = async (): Promise<{ props: DataProps; revalidate: 
 };
 
 export interface DataProps {
-  projects: FeedEntry<FeedType.Github>[];
-  works: FeedEntry<FeedType.Behance>[];
-  articles: FeedEntry<FeedType.Medium>[];
+  projects: (FeedEntry & { type: FeedType.Github })[];
+  works: (FeedEntry & { type: FeedType.Behance })[];
+  articles: (FeedEntry & { type: FeedType.Medium })[];
 }
