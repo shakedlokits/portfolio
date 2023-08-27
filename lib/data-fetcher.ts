@@ -1,11 +1,12 @@
 import { GetServerSidePropsContext } from 'next';
-import { FeedEntry, FeedType, getBahanceWorks, getGithubProjects, getMediumArticles } from './rss-service';
+import { getGithubProjects, getMediumArticles } from './rss-service';
+import { FeedEntry, FeedType, getBehanceWorks } from './sources';
 
 export const getServerSideProps = async ({ res }: GetServerSidePropsContext): Promise<{ props: DataProps }> => {
   res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=600');
 
   const projects = await getGithubProjects();
-  const works = await getBahanceWorks();
+  const works = await getBehanceWorks();
   const articles = await getMediumArticles();
 
   return {
@@ -20,9 +21,10 @@ export const getServerSideProps = async ({ res }: GetServerSidePropsContext): Pr
 export const getStaticProps = async (): Promise<{ props: DataProps; revalidate: number }> => {
   const projects = [] as any;
   // const projects = await getGithubProjects();
-  // console.log('Refetching props');
-  const works = await getBahanceWorks();
+  const works = await getBehanceWorks();
   const articles = await getMediumArticles();
+
+  console.log(works);
 
   return {
     props: {

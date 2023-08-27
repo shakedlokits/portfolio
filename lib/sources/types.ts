@@ -10,5 +10,6 @@ export interface FeedEntry<T extends FeedType> {
   title: string;
   content: string;
   snippet: string;
+  cover?: string;
   type: T;
 }

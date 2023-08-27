@@ -1,4 +1,3 @@
-import { RefObject, useEffect, useMemo, useRef, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 
 export const Title = ({ funny }: { funny?: boolean }) => {

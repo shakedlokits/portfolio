@@ -1,21 +1,7 @@
 import Parser from 'rss-parser';
 import { createLogger } from './logger';
 import * as cheerio from 'cheerio';
-
-export enum FeedType {
-  Behance = 'behance',
-  Github = 'github',
-  Medium = 'medium',
-}
-
-export interface FeedEntry<T extends FeedType> {
-  link: string;
-  date: string;
-  title: string;
-  content: string;
-  snippet: string;
-  type: T;
-}
+import { FeedEntry, FeedType } from './sources';
 
 const parser = new Parser();
 const logger = createLogger('rss-service');
@@ -46,49 +32,6 @@ export const getMediumArticles = async (): Promise<FeedEntry<FeedType.Medium>[]>
     );
   } catch (error) {
     logger.error(error, 'Failed to fetch articles from medium');
-    return [];
-  }
-};
-
-const getWorkContent = async (link: string): Promise<string> => {
-  const projectId = /^https:\/\/www\.behance\.net\/gallery\/(?<id>\d+)\/\w+$/gm.exec(link)?.groups?.id;
-
-  const response = await fetch(
-    `http://www.behance.net/v2/projects/${projectId}?callback=%3F&api_key=${process.env.BEHANCE_API_KEY}`
-  );
-  const raw = await response.text();
-  const json: { modules?: { type: string; text_plain: string }[] } = JSON.parse(
-    /\/\*\*\/\?\((?<content>.*)\)\;/.exec(raw)?.groups?.content ?? '{}'
-  );
-
-  return json.modules?.find((m) => m.type === 'text')?.text_plain ?? '';
-};
-
-export const getBahanceWorks = async (): Promise<FeedEntry<FeedType.Behance>[]> => {
-  if (!process.env.BEHANCE_USERNAME) return [];
-
-  try {
-    const response = await fetch(`https://www.behance.net/feeds/user?username=${process.env.BEHANCE_USERNAME}`);
-    const xml = await response.text();
-    const feed = await parser.parseString(xml);
-
-    console.log(feed);
-
-    return Promise.all(
-      feed.items.map(
-        async (item) =>
-          ({
-            title: item['title'],
-            content: item['link'] && (await getWorkContent(item['link'])),
-            snippet: item['contentSnippet'],
-            date: item['isoDate'],
-            link: item['link'],
-            type: FeedType.Behance,
-          } as FeedEntry<FeedType.Behance>)
-      )
-    );
-  } catch (error) {
-    logger.error(error, 'Failed to fetch works from behance');
     return [];
   }
 };

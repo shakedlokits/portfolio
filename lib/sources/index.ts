@@ -1,2 +1,3 @@
-export type { FeedType, FeedEntry } from './types';
-export { getProjectsList } from './behance';
+export { FeedType } from './types';
+export type { FeedEntry } from './types';
+export { getBehanceWorks } from './behance';

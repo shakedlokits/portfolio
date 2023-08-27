@@ -1,4 +1,4 @@
-import { FeedEntry, FeedType } from '../lib/rss-service';
+import { FeedEntry, FeedType } from '../lib/sources';
 import { Link } from './Link';
 import { format } from 'date-fns';
 import { titleCase } from '../lib/utilities';
@@ -6,6 +6,8 @@ import { titleCase } from '../lib/utilities';
 const formatDate = (entry: FeedEntry<any>) => format(new Date(entry.date), 'MMMM do, yyyy');
 
 const formatImageUrl = (entry: FeedEntry<any>) => {
+  if (entry.cover) return entry.cover;
+
   const contentImage = entry.content.match(/(http)?s?:?(\/\/[^"']*?\.(?:png|jpg|jpeg|gif|png))/)?.[0];
 
   if (entry.type === FeedType.Github && !contentImage) {    
