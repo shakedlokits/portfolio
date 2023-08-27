@@ -48,8 +48,8 @@ body {
     position: absolute;
     width: 90%;
     height: 60%;
-    top: 32px;
-    left: 16px;
+    top: 24px;
+    left: 12px;
     background: #FDFF9B;
     z-index: -1;
   }
