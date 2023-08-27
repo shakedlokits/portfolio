@@ -25,5 +25,4 @@ module.exports = {
       body: ['Junicode', 'sans-serif'],
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
 };

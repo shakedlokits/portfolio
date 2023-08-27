@@ -17,10 +17,13 @@ const formatImageUrl = (entry: FeedEntry<any>) => {
 
 const formatTitle = (entry: FeedEntry<any>) => entry.type === FeedType.Github ? titleCase(entry.title) : entry.title;
 
+const formatSource = (entry: FeedEntry<any>) => Object.keys(FeedType)[Object.values(FeedType).indexOf(entry.type)]
+
 const Article = ({ entry }: { entry: FeedEntry<any> }) => {
   const image = formatImageUrl(entry);
   const date = formatDate(entry);
   const title = formatTitle(entry);
+  const type = formatSource(entry);
 
   return (
     <article className="flex flex-col justify-center gap-3 break-inside-avoid-column mb-4">
@@ -29,17 +32,21 @@ const Article = ({ entry }: { entry: FeedEntry<any> }) => {
         <Link href={entry.link} redirect>{title}</Link>
       </h2>
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
-      <p className="text-base indent-3 leading-none line-clamp-5 text-justify">{entry.snippet}</p>
+      <p className="text-base indent-3 leading-[1.2rem] line-clamp-5 text-justify break-word hyphens-auto">{entry.snippet}</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       {image && <img className="w-full" src={image} alt={entry.title} />}
-      <span className="text-xs font-bold text-right uppercase">{date}</span>
+      <div className='flex justify-between text-xs font-bold uppercase'>
+      <span className='font-bold'>from {type}</span>
+      <span>{date}</span>
+      </div>
+      
     </article>
   );
 };
 
 export const ArticleList = ({ entries }: { entries: FeedEntry<any>[] }) => {
   return (
-    <div className="sm:columns-4xs gap-6 columns-rule">
+    <div className="xl:columns-3 columns-1 md:columns-2 gap-6 columns-rule">
       {entries.map((entry, index) => (
         <Article key={index} entry={entry} />
       ))}

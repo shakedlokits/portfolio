@@ -18,7 +18,9 @@ export const getServerSideProps = async ({ res }: GetServerSidePropsContext): Pr
 };
 
 export const getStaticProps = async (): Promise<{ props: DataProps; revalidate: number }> => {
-  const projects = await getGithubProjects();
+  const projects = [] as any;
+  // const projects = await getGithubProjects();
+  // console.log('Refetching props');
   const works = await getBahanceWorks();
   const articles = await getMediumArticles();
 
