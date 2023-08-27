@@ -1,7 +1,6 @@
 import { FeedEntry, FeedType } from '../lib/sources';
 import { Link } from './Link';
 import { format } from 'date-fns';
-import { titleCase } from '../lib/utilities';
 
 const formatDate = (entry: FeedEntry) => format(new Date(entry.date), 'MMMM do, yyyy');
 
@@ -17,21 +16,18 @@ const formatImageUrl = (entry: FeedEntry) => {
   return contentImage;
 }
 
-const formatTitle = (entry: FeedEntry) => entry.type === FeedType.Github ? titleCase(entry.title) : entry.title;
-
 const formatSource = (entry: FeedEntry) => Object.keys(FeedType)[Object.values(FeedType).indexOf(entry.type)]
 
 const Article = ({ entry }: { entry: FeedEntry }) => {
   const image = formatImageUrl(entry);
   const date = formatDate(entry);
-  const title = formatTitle(entry);
   const type = formatSource(entry);
 
   return (
     <article className="flex flex-col justify-center gap-3 break-inside-avoid-column mb-4">
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
       <h2 className="text-lg leading-tight font-bold text-center">
-        <Link href={entry.link} redirect>{title}</Link>
+        <Link href={entry.link} redirect>{entry.title}</Link>
       </h2>
       <div className="h-[1px] bg-black block relative align-middle mx-auto w-20" />
       <p className="text-base indent-3 leading-[1.2rem] line-clamp-5 text-justify break-word hyphens-auto">{entry.snippet}</p>

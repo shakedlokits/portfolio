@@ -1,7 +1,7 @@
 import { createLogger } from '../logger';
 import { FeedType, FeedEntry } from './index';
 
-const logger = createLogger('behance-source');
+const logger = createLogger('sources');
 
 interface ProjectsListItem {
   id: number;
@@ -49,10 +49,8 @@ interface Project {
 
 const getProjectsList = async () => {
   const url = `http://www.behance.net/v2/users/${process.env.BEHANCE_USERNAME}/projects?callback=%3F&per_page=12&api_key=${process.env.BEHANCE_API_KEY}`;
-  const response = await fetch(url, { next: { revalidate: 1800 } });
+  const response = await fetch(url, {next: {revalidate: Number(process.env.REQUEST_CACHE_EXPIRATION)}});
   const raw = await response.text();
-
-  logger.info('fetched behance projects list');
 
   // body is returned with anti-csrf measures, i.e /**/?( ... ); wrapper
   const sanitizedBody = JSON.parse(/\/\*\*\/\?\((?<content>.*)\)\;/.exec(raw)?.groups?.content ?? '{}');
@@ -62,10 +60,8 @@ const getProjectsList = async () => {
 
 const getProjectData = async (projectId: number) => {
   const url = `http://www.behance.net/v2/projects/${projectId}?callback=%3F&api_key=${process.env.BEHANCE_API_KEY}`;
-  const response = await fetch(url, { next: { revalidate: 1800 } });
+  const response = await fetch(url, {next: {revalidate: Number(process.env.REQUEST_CACHE_EXPIRATION)}});
   const raw = await response.text();
-
-  logger.info('fetched behance project by id', projectId);
 
   // body is returned with anti-csrf measures, i.e /**/?( ... ); wrapper
   const sanitizedBody = JSON.parse(/\/\*\*\/\?\((?<content>.*)\)\;/.exec(raw)?.groups?.content ?? '{}');

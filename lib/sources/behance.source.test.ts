@@ -1,4 +1,4 @@
-import { getBehanceWorks } from './behance';
+import { getBehanceWorks } from './behance.source';
 
 it('get behance works', async () => {
   const works = await getBehanceWorks();

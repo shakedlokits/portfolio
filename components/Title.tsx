@@ -1,6 +1,6 @@
 import Typewriter from 'typewriter-effect';
 
-export const Title = ({ funny }: { funny?: boolean }) => {
+export const Title = ({ funny }: { funny?: boolean }) => {  
   return (
     <div className="pb-8">
       <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1] ">
