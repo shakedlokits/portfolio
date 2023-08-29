@@ -4,34 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom fonts */
-
-@font-face {
-  font-family: 'Junicode';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/Junicode.ttf');
-}
-
-@font-face {
-  font-family: 'Junicode';
-  font-style: bold;
-  font-weight: 600;
-  src: url('/fonts/Junicode-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'YoungSerif';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/YoungSerif-Regular.otf');
-}
-
 /* Custom styles */
-
-body {
-  font-family: 'Junicode', sans-serif;
-}
 
 @layer utilities {
   .columns-rule {
@@ -46,9 +19,9 @@ body {
   .hightlight::before {
     content: "";
     position: absolute;
-    width: 90%;
+    width: 95%;
     height: 60%;
-    top: 24px;
+    top: 50%;
     left: 12px;
     background: #FDFF9B;
     z-index: -1;

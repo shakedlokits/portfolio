@@ -1,5 +1,7 @@
 import { kv } from '@vercel/kv';
 import { FeedEntry } from './sources';
+import classNames from 'classnames';
+import { twMerge } from 'tailwind-merge';
 
 export const titleCase = (s: string) =>
   s.replace(/^[-_]*(.)/, (_, c) => c.toUpperCase()).replace(/[-_]+(.)/g, (_, c) => ' ' + c.toUpperCase());
@@ -37,3 +39,5 @@ export const cacheOperation = async <T extends (...args: any[]) => Promise<strin
 
   return newResult;
 };
+
+export const classy: typeof classNames = (...args) => twMerge(classNames(args));
