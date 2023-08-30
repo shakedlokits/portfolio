@@ -10,7 +10,10 @@ const nextConfig = {
       'opengraph.githubassets.com',
       'mir-s3-cdn-cf.behance.net'
     ]
-  }
+  },
+  experimental: {
+    serverActions: true,
+  },
 }
 
 module.exports = nextConfig
