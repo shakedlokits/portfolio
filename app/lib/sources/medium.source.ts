@@ -1,5 +1,5 @@
-import { createLogger } from '../logger';
-import { titleCase } from '../utilities';
+import { createLogger } from '../utilities/logger';
+import { titleCase } from '../utilities/utilities';
 import { FeedEntry, FeedType } from './types';
 import Parser from 'rss-parser';
 
