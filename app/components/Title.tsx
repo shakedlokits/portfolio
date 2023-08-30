@@ -7,6 +7,7 @@ export const Title = ({ funny }: { funny?: boolean }) => {
     <div className="pb-8">
       <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1] ">
         Hi! I’m Shaked Lokits,<br />Technically&nbsp;
+        <br className='sm:hidden inline' />
         <span className="hightlight inline whitespace-nowrap">
           <Typewriter
             options={{
