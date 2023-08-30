@@ -1,5 +1,5 @@
 import { kv } from '@vercel/kv';
-import { FeedEntry } from '../sources';
+import { FeedEntry } from '@lib/sources';
 import classNames from 'classnames';
 import { twMerge } from 'tailwind-merge';
 

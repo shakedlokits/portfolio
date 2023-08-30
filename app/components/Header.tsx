@@ -1,10 +1,9 @@
 'use client';
-
 import format from 'date-fns/format';
 import { Link } from './Link';
 import { useState } from 'react';
-import { useWttr } from '../lib/hooks/use-wttr';
-import type { StockData } from '../lib/server/get-stock-data';
+import { useWttr } from '@lib/hooks';
+import type { StockData } from '@lib/server';
 
 const formatTicker = ({ uplift }: StockData) => {
   const { sign, arrow, color } = (() => {

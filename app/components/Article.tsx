@@ -1,4 +1,4 @@
-import { FeedEntry } from '../lib/sources';
+import { FeedEntry } from '@lib/sources';
 import { Link } from './Link';
 import Image from 'next/image';
 import { format } from 'date-fns';

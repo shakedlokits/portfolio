@@ -1,4 +1,4 @@
-import { FeedEntry, FeedType, getBehanceWorks, getGithubProjects, getMediumArticles } from '../sources';
+import { FeedEntry, FeedType, getBehanceWorks, getGithubProjects, getMediumArticles } from '@lib/sources';
 
 export const getArticles = async (): Promise<{
   projects: (FeedEntry & { type: FeedType.Github })[];
