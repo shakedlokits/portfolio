@@ -75,6 +75,11 @@ export const Header = ({ stock }: { stock: StockData }) => {
             Contact Me
           </Link>
         </span>
+        <span className="text-[1rem] uppercase inline font-bold hightlight">
+          <Link href="https://calendar.app.google/6ScLUxGm6hkjtpP97" redirect>
+            Free Mentoring
+          </Link>
+        </span>
         <span className="text-[1rem] uppercase sm:inline hidden font-bold">
           <Link href="https://spaceflightnow.com/launch-schedule/" redirect>
             Upcoming Space Launch
