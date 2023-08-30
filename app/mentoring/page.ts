@@ -1,5 +1,7 @@
 import { redirect } from 'next/navigation';
 
-export const GET = async () => {
+const MentoringRedirect = async () => {
   redirect('https://calendar.app.google/6ScLUxGm6hkjtpP97');
 };
+
+export default MentoringRedirect;
