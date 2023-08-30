@@ -1,3 +1,5 @@
+"use client";
+
 import Typewriter from 'typewriter-effect';
 
 export const Title = ({ funny }: { funny?: boolean }) => {  

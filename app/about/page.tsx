@@ -1,12 +1,9 @@
-import { Title } from '../components/Title';
-import { Footer } from '../components/Footer';
-import me from '../public/me.jpg';
+import me from '../assets/me.jpg';
 import Image from 'next/image'
 
 const About = () => {
   return (
-    <div className="container mx-auto max-w-3xl px-9 pt-24 font-body">
-      <Title />
+    <>
       <p>
         Armed with a triple-major for Computer Science, Education and Visual Communication at the Hebrew University of
         Jerusalem and Bezalel Academy for Arts and Design. I am very interested in utilizing interdisciplinary solutions
@@ -27,8 +24,7 @@ const About = () => {
       <div className='block'>
         <Image src={me} alt="Picture of the author" width={384} height={512}/>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

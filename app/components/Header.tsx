@@ -1,7 +1,9 @@
+"use client";
+
 import format from 'date-fns/format';
 import { Link } from './Link';
 import { useState } from 'react';
-import { useWttr } from '../lib/use-wttr';
+import { useWttr } from '../lib/hooks/use-wttr';
 
 const MenuIcon = () => (
   <svg
@@ -16,14 +18,18 @@ const MenuIcon = () => (
   </svg>
 );
 
-export const Header = () => {
+export const Header = () => {  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const weather = useWttr();
   const day = `Tel Aviv, ${format(new Date(), 'eeee')}, `;
   const date = format(new Date(), 'MMMM d, yyyy');
 
   return (
-    <header className={`transition ease-in-out delay-200 ${isMenuOpen ? 'bg-[#FDFF9B]' : ''} flex flex-row justify-between border-black border-b-4 border-t-2 py-1 mb-8`}>
+    <header
+      className={`transition ease-in-out delay-200 ${
+        isMenuOpen ? 'bg-[#FDFF9B]' : ''
+      } flex flex-row justify-between border-black border-b-4 border-t-2 py-1 mb-8`}
+    >
       <button className="text-[1rem] font-bold pr-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <MenuIcon />
         <p className="inline align-bottom ml-1">{isMenuOpen ? 'Close' : 'Menu'}</p>
@@ -34,10 +40,14 @@ export const Header = () => {
             <Link href="/about">Editor&apos;s Note</Link>
           </span>
           <span className="text-[1rem] uppercase sm:inline hidden font-bold">
-            <Link href="https://www.linkedin.com/in/shaked-lokits/" redirect>Contact Me</Link>
+            <Link href="https://www.linkedin.com/in/shaked-lokits/" redirect>
+              Contact Me
+            </Link>
           </span>
           <span className="text-[1rem] uppercase sm:inline hidden font-bold">
-            <Link href="https://spaceflightnow.com/launch-schedule/" redirect>Upcoming Space Launch</Link>
+            <Link href="https://spaceflightnow.com/launch-schedule/" redirect>
+              Upcoming Space Launch
+            </Link>
           </span>
         </>
       ) : (

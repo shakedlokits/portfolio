@@ -1,4 +1,4 @@
-import { createLogger } from '../logger';
+import { createLogger } from '../utilities/logger';
 import { FeedType, FeedEntry } from './index';
 
 const logger = createLogger('sources');
