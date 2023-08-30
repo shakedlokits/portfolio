@@ -23,10 +23,10 @@ export const calculateGridOrientation = (index: number, length: number): GridOri
   // return the orientation
   switch (gridDimensionIndicator) {
     case 0:
-      return 'square';
+      return GridOrientation.Square;
     case 1:
-      return 'horizontal';
+      return GridOrientation.Horizontal;
     case 2:
-      return 'vertical';
+      return GridOrientation.Vertical;
   }
 };
