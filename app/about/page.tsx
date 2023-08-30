@@ -1,4 +1,4 @@
-import me from '../public/me.jpg';
+import me from '../assets/me.jpg';
 import Image from 'next/image'
 
 const About = () => {
