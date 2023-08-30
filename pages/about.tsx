@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <div className="container mx-auto max-w-3xl px-9 pt-24">
+    <div className="container mx-auto max-w-3xl px-9 pt-24 font-body">
       <Title />
       <p>
         Armed with a triple-major for Computer Science, Education and Visual Communication at the Hebrew University of

@@ -9,9 +9,9 @@ export {getStaticProps} from '../lib/data-fetcher';
 
 const Home = ({projects, works, articles}: DataProps) => {
     const entries = shuffleEntries([...articles, ...works, ...projects]).filter((e) => !e.title.includes('portfolio'));
-    
+
     return (
-        <div className="container mx-auto max-w-3xl px-9 pt-20">
+        <div className="container mx-auto max-w-3xl px-9 pt-20 font-body">
             <Title funny/>
             <Header/>
             <ArticleList entries={entries}/>

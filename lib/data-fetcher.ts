@@ -22,8 +22,6 @@ export const getStaticProps = async (): Promise<{ props: DataProps; revalidate: 
   const works = await getBehanceWorks();
   const articles = await getMediumArticles();
 
-  console.log(projects);
-
   return {
     props: {
       projects,
