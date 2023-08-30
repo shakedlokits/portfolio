@@ -1,5 +1,5 @@
 import {DataProps} from '../lib/data-fetcher';
-import {ArticleGrid} from '../components/Article';
+import {ArticleList} from '../components/Article';
 import {Header} from '../components/Header';
 import {Title} from '../components/Title';
 import {Footer} from '../components/Footer';
@@ -23,7 +23,7 @@ const Home = ({projects, works, articles}: DataProps) => {
         <div className="container mx-auto max-w-3xl px-9 pt-20 font-body">
             <Title funny/>
             <Header/>
-            <ArticleGrid articles={entries} getOrientationPreferences={getFeedEntryPreferences}/>
+            <ArticleList entries={entries}/>
             <Footer/>
         </div>
     );
