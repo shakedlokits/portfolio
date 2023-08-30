@@ -76,7 +76,7 @@ export const Header = ({ stock }: { stock: StockData }) => {
           </Link>
         </span>
         <span className="text-[1rem] uppercase inline font-bold hightlight">
-          <Link href="https://calendar.app.google/6ScLUxGm6hkjtpP97" redirect>
+          <Link href="/mentoring" redirect>
             Free Mentoring
           </Link>
         </span>
