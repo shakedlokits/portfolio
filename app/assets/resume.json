@@ -1,0 +1,721 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Shaked Lokits",
+    "label": "Boldly going where engineering shouldn't",
+    "image": "https://media.licdn.com/dms/image/C4D03AQHrYW2-mzDfJA/profile-displayphoto-shrink_800_800/0/1653905713354?e=1726099200&v=beta&t=te8GuZ-vMA6MMn3vnXCc7TVivlQCddtIKQEt0dMJ7uE",
+    "email": "shaked.lokits@gmail.com",
+    "phone": "+972 52 443 8094",
+    "url": "shakedlokits.com",
+    "summary": "Armed with a triple-major for Computer Science, Education and Visual Communication at the Hebrew University of Jerusalem and Bezalel Academy for Arts and Design. I am very interested in utilizing interdisciplinary solutions to solve and re-design real world problems.\nComing from a difficult social-economic background I quit school early and found great interest in the symbiosis between design and engineering for it’s impact on re-designing our education. Constantly looking for better information models which could be applied to parametric and generative design solutions.\nWhen I’m not obsessing about content generation, you would usually find me sailing somewhere, motorcycling a mountain or wondering around looking for something new to eat.",
+    "location": {
+      "countryCode": "IL",
+      "address": "26th Nakhali'el St.",
+      "city": "Tel Aviv",
+      "postalCode": "6560926"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "shaked-lokits",
+        "url": "https://www.linkedin.com/in/shaked-lokits/"
+      },
+      {
+        "network": "GitHub",
+        "username": "shakedlokits",
+        "url": "https://github.com/shakedlokits"
+      },
+      {
+        "network": "Medium",
+        "username": "shakedlokits",
+        "url": "https://medium.com/@shakedlokits"
+      },
+      {
+        "network": "Behance",
+        "username": "shaked-lokits",
+        "url": "https://www.behance.net/shaked-lokits"
+      },
+      {
+        "network": "Instagram",
+        "username": "ha_stoican",
+        "url": "https://www.instagram.com/ha_stoican"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Hebrew University of Jerusalem",
+      "area": "Education",
+      "studyType": "Bachelor of Arts (B.A.)",
+      "startDate": "2014",
+      "endDate": "2017",
+      "courses": [
+        "Project-Based Learning (PBL)",
+        "Educational Social-psychology",
+        "Educational Technology",
+        "Theory of Knowledge",
+        "Modern Educational Methodologies"
+      ]
+    },
+    {
+      "institution": "Bezalel Academy of Art and Design",
+      "area": "Visual Communications",
+      "studyType": "Bachelor of Design (B.Des.)",
+      "startDate": "2014",
+      "endDate": "2019",
+      "courses": [
+        "Interaction Design",
+        "Design Thinking",
+        "Creative Coding",
+        "Indie Games",
+        "Digital Art",
+        "3D Design",
+        "Illustration"
+      ]
+    },
+    {
+      "institution": "Hebrew University of Jerusalem",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science (B.Sc.)",
+      "startDate": "2014",
+      "endDate": "2017",
+      "score": "",
+      "courses": [
+        "Image Processing",
+        "Machine Learning",
+        "Human Computer Interaction (HCI)",
+        "Computer Vision",
+        "Artificial Intelligence (AI)",
+        "Digital Signal Processing",
+        "Procedural Algorithms",
+        "Natural Language Processing"
+      ]
+    },
+    {
+      "institution": "Hebrew University of Jerusalem",
+      "area": "Computer Science, Procedural Generation and Design",
+      "studyType": "Master of Science (M.Sc.)",
+      "startDate": "2017",
+      "endDate": "2020",
+      "courses": [
+        "Multilinear Constraints Systems",
+        "Neaural Networks and Deep Learning",
+        "Procedural Approaches to Generative Design",
+        "Approximation Theory",
+        "Educational Games"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "name": "Stealth Startup",
+      "position": "Co-Founder & Product Manager",
+      "startDate": "2024",
+      "endDate": "2024",
+      "highlights": [
+        "Led the development of Spark, a mobile app designed to gamify the mobilization of NGO activists, enhancing engagement and distribution of public affairs content.",
+        "Directed cross-disciplinary teams in creating interactive and user-friendly app features that incentivize community growth and active participation.",
+        "Collaborated with NGOs to understand their needs, ensuring the platform effectively supports their initiatives and maximizes community impact.",
+        "Piloted user feedback loops to refine app functionalities, ensuring alignment with user expectations and campaign effectiveness."
+      ],
+      "url": "https://sparkstudio.app/",
+      "location": "Tel Aviv, Israel",
+      "type": "Product Management"
+    },
+    {
+      "name": "Words of Iron",
+      "position": "Founder & CEO",
+      "startDate": "2023",
+      "endDate": "2024",
+      "highlights": [
+        "Founded Words of Iron, a pioneering project in collaboration with Israel's National Public Diplomacy Directorate and leading tech companies, in response to the October 7th Hamas attack and the onset of the Hamas-Israel War.",
+        "Established the mission to address online hate-speech by empowering individuals to deliver factual information to key audiences.",
+        "Led Words of Iron to growth exceeding 1M monthly active users, generating millions of daily impressions and playing a crucial role in shaping public opinion and countering hate-speech in the digital realm."
+      ],
+      "url": "https://www.calcalistech.com/ctechnews/article/bj9qt8hzt",
+      "location": "Tel Aviv, Israel",
+      "type": "Product Management"
+    },
+    {
+      "name": "Alta Revenue Platform",
+      "position": "Technical Product Manager",
+      "startDate": "2023",
+      "endDate": "2024",
+      "highlights": [
+        "Developed and launched an AI-powered revenue platform, enhancing data-driven decision-making for sales, marketing, and customer success teams.",
+        "Coordinated cross-functional efforts to integrate major CRM and data tools like Salesforce, HubSpot, and Stripe, significantly improving real-time data collection, metric tracking and insight analysis.",
+        "Developed and researched the design of a customizable metrics library, establishing industry best practices and facilitating scalable, insights-driven business growth."
+      ],
+      "url": "https://www.linkedin.com/company/altahqdotcom/",
+      "location": "Tel Aviv, Israel",
+      "type": "Product Management"
+    },
+    {
+      "name": "Melio",
+      "position": "Technical Lead",
+      "startDate": "2020",
+      "endDate": "2023",
+      "highlights": [
+        "Developed and managed various products using serverless architecture on AWS, employing services like Lambda, SQS, SNS, API Gateway, Fargate, and CloudFormation.",
+        "Led backend development with Node, Express, and Sequelize, and frontend development using React, Redux, Vite, Webpack, and ChakraUI.",
+        "Spearheaded the design of vendor management solutions and remodeling of vendor systems, establishing key engineering ownership over the vendors' side of Melio.",
+        "Contributed to diverse projects including international payments, Mastercard Billers directory, and Shopify UI integration.",
+        "Provided advisory support for projects such as QuickBooks sync and accountant receivables.",
+        "Actively mentored other engineers, guiding their career development and fostering a culture of teamwork and collaboration at Melio."
+      ],
+      "url": "https://www.linkedin.com/company/meliopayments/",
+      "location": "Tel Aviv, Israel",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Datahack",
+      "position": "Engineering Team Lead",
+      "startDate": "2015",
+      "endDate": "2021",
+      "description": "Datahack is an Israeli non-profit dedicated to the advancement of data science and machine learning in Israel. We focus on strengthening academia-industry ties, data science literacy and education, intra-community cohesion and knowledge sharing and empowerment of underrepresented populations.",
+      "highlights": [
+        "Managed the engineering team of Datahack.",
+        "Developed and maintained event management systems, data pipelines, and data visualization tools.",
+      ],
+      "url": "https://www.linkedin.com/company/datahack/",
+      "location": "Jerusalem, Israel",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "WeWork",
+      "position": "Senior Software Engineer, Billing & Payments",
+      "startDate": "2018",
+      "endDate": "2020",
+      "highlights": [
+        "Developed an enterprise grade, high-load, zero-loss financial systems over RabbitMQ, Kubernetes, Go, Rails, Node and React",
+        "Created and deployed a production monitoring, logging and tracing infrastructure",
+        "Standardized a serverless host over Openwhisk"
+      ],
+      "url": "https://www.linkedin.com/company/wework/",
+      "location": "Tel Aviv, Israel",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Architectural Association School",
+      "position": "Landscape Urbanism, Master’s Guest Tutor",
+      "startDate": "2018",
+      "endDate": "2018",
+      "highlights": [
+        "Taught and advised multiple master’s final projects in the field of Generative Design.",
+        "Researched and designed maritime fishing infrastructure for the ministry of fisheries."
+      ],
+      "url": "https://www.linkedin.com/school/architectural-association/",
+      "location": "London, United Kingdom",
+      "type": "Education"
+    },
+    {
+      "name": "Lightricks",
+      "position": "Prototyping Engineer, Photofox",
+      "startDate": "2018",
+      "endDate": "2018",
+      "highlights": [
+        "Researched, managed and developed a production-level, separable style transfer feature which imitates real-life craft processes.",
+        "Orchestrated an automated, visual quality, testing and verification system.",
+        "Designed the first multi-network AI-powered photo editing solution in the market."
+      ],
+      "url": "https://www.linkedin.com/company/lightricks/",
+      "location": "Jerusalem, Israel",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "RealFriend",
+      "position": "Technical Lead",
+      "startDate": "2018",
+      "endDate": "2018",
+      "highlights": [
+        "Developed live production AI CRM and front facing experiences over a fully integrated Next.js, Apollo, Mongo, GraphQL stack",
+        "Introduced new work management methodologies in order to optimize proficiency",
+        "Trained and managed CRF models for free-form data extraction and chat comprehension",
+        "Developed expert-hybrid AI conversational agents without LLMs"
+      ],
+      "url": "https://www.linkedin.com/company/realfriendai/",
+      "location": "Tel Aviv, Israel",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Regeringskansliet, Utbildningsdepartementet",
+      "position": "Software Engineering Consultant",
+      "startDate": "2018",
+      "endDate": "2018",
+      "highlights": [
+        "Consulted on the design, architecture and implementation of a generative, interactive, high-scale web application built for parents."
+      ],
+      "url": "https://www.linkedin.com/company/utbildningsdepartementet-se/",
+      "location": "Stockholm, Sweden",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Red Hat",
+      "position": "Software Architect, Central-CI",
+      "startDate": "2016",
+      "endDate": "2018",
+      "highlights": [
+        "Designed, developed and managed a centralized code quality analysis and publishing framework and workflow",
+        "Worked with popular CI and virtualization tools such as: Jenkins, Docker, Ansible, Puppet, OpenShift, OpenStack and more, for deployment and automation purposes"
+      ],
+      "url": "https://www.linkedin.com/company/red-hat/",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "The Hebrew University of Jerusalem",
+      "position": "Education Manager & Teaching Assistant",
+      "startDate": "2015",
+      "endDate": "2016",
+      "highlights": [
+        "Developing pedagogical programs for the Youth Center for Advanced Studies (YCAS) in the areas of computer science and engineering",
+        "Curated a special cyber/cryptography program for the Ministry of Education",
+        "Worked as a TA of Academic Literature"
+      ],
+      "url": "https://www.linkedin.com/school/hebrew-university/",
+      "location": "Jerusalem, Israel",
+      "type": "Education"
+    },
+    {
+      "name": "The Israeli Ministry of Education",
+      "position": "High School Teacher",
+      "startDate": "2013",
+      "endDate": "2015",
+      "highlights": [
+        "Instructed calculus and graphic design across multiple high schools, notably leading the first-ever ultra-orthodox high school class to achieve a Bagrut certificate in mathematics.",
+        "Developed the innovative bricolage education paradigm through experimentation with diverse teaching methods beyond traditional approaches.",
+        "Created and implemented several pedagogical programs in mathematics, computer science, and parametric design based on the bricolage education paradigm."
+      ],
+      "url": "https://www.linkedin.com/company/ministry-of-education-%D7%9E%D7%A9%D7%A8%D7%93-%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A/",
+      "location": "Jerusalem, Israel",
+      "type": "Education"
+    },
+    {
+      "name": "Jam Media",
+      "position": "Creative Manager, Digital Marketing",
+      "startDate": "2013",
+      "endDate": "2014",
+      "highlights": [
+        "Coordinated large-scale digital advertising projects with public institutions, political parties and universities",
+        "Developed client protocols and optimized working technologies and design workflows"
+      ],
+      "url": "https://www.joomla-israel.co.il",
+      "location": "Tel Aviv, Israel",
+      "type": "Design"
+    },
+    {
+      "name": "McCann Worldgroup",
+      "position": "Art Director, Print Marketing",
+      "startDate": "2012",
+      "endDate": "2013",
+      "highlights": [
+        "Specializing in big-industry and political print advertising",
+        "Managed and coordinated large-scale branding & advertising projects",
+        "Developed complex mass-production print processes and developed several work protocols"
+      ],
+      "url": "https://www.linkedin.com/company/mccannworldgroup/",
+      "location": "Tel Aviv, Israel",
+      "type": "Design"
+    },
+    {
+      "name": "Israeli Navy",
+      "position": "Senior Chief Petty Officer",
+      "startDate": "2009",
+      "endDate": "2013",
+      "url": "https://www.linkedin.com/company/israelnavy/"
+    },
+    {
+      "name": "Lapam Israel's Government Advertising Agency",
+      "position": "Marketing Designer",
+      "startDate": "2007",
+      "endDate": "2012",
+      "highlights": [
+        "Designed multiple mass-media public affairs campaigns for the Ministry of Education, the Ministry of Health, and the Ministry of Transportation"
+      ],
+      "url": "https://www.linkedin.com/company/lapam-israel-s-government-advertising-agency/",
+      "location": "Tel Aviv, Israel",
+      "type": "Design"
+    },
+    {
+      "name": "R2M Corporation",
+      "position": "Lead Line Cook",
+      "startDate": "2006",
+      "endDate": "2007",
+      "url": "https://www.linkedin.com/company/r2m-corporation/",
+      "location": "Tel Aviv, Israel"
+    },
+    {
+      "name": "R2M Corporation",
+      "position": "Line Cook",
+      "startDate": "2005",
+      "endDate": "2006",
+      "url": "https://www.linkedin.com/company/r2m-corporation/",
+      "location": "Tel Aviv, Israel"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Moshal Program",
+      "position": "Student Mentor",
+      "startDate": "2023",
+      "endDate": "2024",
+      "highlights": [
+        "Mentored a student in the Moshal Program for a year.",
+        "Provided guidance and support in their professional development, including networking, resume building, and interview preparation."
+      ],
+      "url": "https://www.moshalscholarship.org"
+    },
+    {
+      "organization": "Public Diplomacy Project",
+      "position": "Founder & CEO",
+      "startDate": "2023",
+      "endDate": "2024",
+      "highlights": [
+        "Founded the Public Diplomacy Project, an organization numbers over 7000 members, dedicated to promoting public diplomacy and combating hate speech in the digital realm",
+        "Developed Words of Iron, a pioneering project with 1M that aims to address online hate-speech by empowering individuals to deliver factual information to key audiences",
+        "Led the development of Spark, a mobile app designed to gamify the mobilization of NGO activists, enhancing engagement and distribution of public affairs content",
+        "Consulted and coordinated public affairs initiatives for various NGOs"
+      ]
+    },
+    {
+      "organization": "Moshal Program",
+      "position": "Steering Committee Member and Mentor",
+      "website": "https://www.moshalscholarship.org",
+      "startDate": "2022",
+      "endDate": "2023",
+      "highlights": [
+        "Served on the steering committee for 7 months to organize a Medical Innovation Hackathon for 130 diverse students",
+        "Mentored participants in tackling real-world HealthTech challenges, guiding them from ideation to implementation",
+        "Collaborated with Moshal Program alumni to foster an environment of innovation and support for the next generation of problem solvers"
+      ]
+    },
+    {
+      "organization": "Datahack",
+      "position": "Engineering Team Lead",
+      "startDate": "2015",
+      "endDate": "2021",
+      "description": "Datahack is an Israeli non-profit dedicated to the advancement of data science and machine learning in Israel. We focus on strengthening academia-industry ties, data science literacy and education, intra-community cohesion and knowledge sharing and empowerment of underrepresented populations.",
+      "highlights": [
+        "Managed the engineering team of Datahack.",
+        "Developed and maintained event management systems, data pipelines, and data visualization tools.",
+      ],
+      "url": "https://www.linkedin.com/company/datahack/"
+    },
+    {
+      "organization": "Side Project Club",
+      "position": "Mentor",
+      "startDate": "2019",
+      "endDate": "2020",
+      "description": "The Side Project Club is a weekly meetup at the Facebook offices in Tel Aviv. We meet to discuss and brainstorm ideas for side-projects, share knowledge, and collaborate on projects.",
+      "highlights": [
+        "Mentored members in various side-projects, including a data science project, a web development project, and a mobile app project",
+        "Provided guidance and support to memebers in selecting projects, setting goals, and overcoming challenges",
+        "Collaborated with members to develop their portfolios and showcase their projects on LinkedIn"
+      ],
+    },
+    {
+      "organization": "Bezalel Academy of Art and Design",
+      "position": "Final Projects Mentor",
+      "startDate": "2018",
+      "endDate": "2019",
+      "highlights": [
+        "Mentored students and aided in the development of multiple final projects.",
+        "Projects included interactive installations, game design, print design, digital art, web design and more."
+      ]
+    },
+    {
+      "organization": "2011 Israeli Social Justice Movement",
+      "position": "Marketing Designer, Digital Marketing",
+      "startDate": "2011",
+      "endDate": "2011",
+      "highlights": [
+        "Designed multiple mass-media public affairs campaigns",
+        "Managed the digital marketing team of the 2011 Israeli Social Justice Movement",
+        "Drew half a million people to the streets of Tel Aviv"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Perennial High-School Cyber Program",
+      "startDate": "2015-12-31",
+      "summary": "The development and maintenance of a perennial high-school cyber/cryptography program for the Ministry of Education.",
+      "url": null,
+      "endDate": "2015-12-31"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Moshal Scholar",
+      "date": "2015-10-31",
+      "awarder": "Moshal Scholarship Program",
+      "summary": "Awarded a Moshal Scholarship intended to support tenacious and determined students from challenging backgrounds, to obtain high quality, sought-after degrees that lead to successful careers."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Community Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Product Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Public Affairs",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Artificial Intelligence (AI)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "English",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Web Design",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Social Media",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Business Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Programming",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Amazon Web Services (AWS)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Research",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Advertising",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "React.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Social Media Marketing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Revenue Analysis",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Digital Marketing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Node.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Software Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Educational Technology",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "TypeScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Product Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Serverless Computing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C++",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Business Intelligence (BI)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Photoshop",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Engineering Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Web Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Customer Success",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Software Architecture",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Copywriting",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Ad Serving",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Data Analysis",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Start-up Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Publishing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Teaching",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Mentorship",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Mathematics Education",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Team Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Facebook",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Business Strategy",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Logo Design",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Editing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Art Direction",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Graphic Design",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Native Speaker",
+      "language": "English"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "Hebrew"
+    }
+  ],
+
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}
