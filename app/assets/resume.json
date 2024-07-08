@@ -1,5 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  },
   "basics": {
     "name": "Shaked Lokits",
     "label": "Boldly going where engineering shouldn't",
@@ -175,7 +179,7 @@
       "description": "Datahack is an Israeli non-profit dedicated to the advancement of data science and machine learning in Israel. We focus on strengthening academia-industry ties, data science literacy and education, intra-community cohesion and knowledge sharing and empowerment of underrepresented populations.",
       "highlights": [
         "Managed the engineering team of Datahack.",
-        "Developed and maintained event management systems, data pipelines, and data visualization tools.",
+        "Developed and maintained event management systems, data pipelines, and data visualization tools."
       ],
       "url": "https://www.linkedin.com/company/datahack/",
       "location": "Jerusalem, Israel",
@@ -396,7 +400,7 @@
       "description": "Datahack is an Israeli non-profit dedicated to the advancement of data science and machine learning in Israel. We focus on strengthening academia-industry ties, data science literacy and education, intra-community cohesion and knowledge sharing and empowerment of underrepresented populations.",
       "highlights": [
         "Managed the engineering team of Datahack.",
-        "Developed and maintained event management systems, data pipelines, and data visualization tools.",
+        "Developed and maintained event management systems, data pipelines, and data visualization tools."
       ],
       "url": "https://www.linkedin.com/company/datahack/"
     },
@@ -410,7 +414,7 @@
         "Mentored members in various side-projects, including a data science project, a web development project, and a mobile app project",
         "Provided guidance and support to memebers in selecting projects, setting goals, and overcoming challenges",
         "Collaborated with members to develop their portfolios and showcase their projects on LinkedIn"
-      ],
+      ]
     },
     {
       "organization": "Bezalel Academy of Art and Design",
@@ -436,286 +440,794 @@
   ],
   "projects": [
     {
+      "name": "Spark",
+      "roles": [
+        "Co-Founder & Product Manager",
+        "Product Manager",
+        "Software Engineer"
+      ],
+      "entity": "Public Diplomacy Project",
+      "startDate": "2024",
+      "endDate": "2024",
+      "highlights": [
+        "Led the development of Spark, a mobile app designed to gamify the mobilization of NGO activists, enhancing engagement and distribution of public affairs content.",
+        "Directed cross-disciplinary teams in creating interactive and user-friendly app features that incentivize community growth and active participation.",
+        "Collaborated with NGOs to understand their needs, ensuring the platform effectively supports their initiatives and maximizes community impact.",
+        "Piloted user feedback loops to refine app functionalities, ensuring alignment with user expectations and campaign effectiveness."
+      ],
+      "keywords": [
+        "Artificial Intelligence (AI)",
+        "Data Analysis",
+        "Machine Learning",
+        "Natural Language Processing",
+        "Public Affairs",
+        "Digital Marketing",
+        "Software Engineering",
+        "Web Development",
+        "Social Media Marketing",
+        "Customer Success",
+        "Sales",
+        "Branding",
+        "Marketing",
+        "Product Management",
+        "Software Architecture",
+        "Business Intelligence (BI)",
+        "Data Science",
+        "Enterpreneurship"
+      ],
+      url: "https://www.sparkstudio.app/",
+      type: "Product Management"
+    },
+    {
+      "name": "Words of Iron",
+      "roles": [
+        "Founder & CEO",
+        "Product Manager",
+        "Software Engineer"
+      ],
+      "entity": "Public Diplomacy Project",
+      "startDate": "2023",
+      "endDate": "2024",
+      "highlights": [
+        "Developed Words of Iron, a pioneering project with 1M that aims to address online hate-speech by empowering individuals to deliver factual information to key audiences",
+        "Managed and grew a thriving team that maintains the engieering and operations of platform"
+      ],
+      "keywords": [
+        "Artificial Intelligence (AI)",
+        "Data Analysis",
+        "Machine Learning",
+        "Natural Language Processing",
+        "Public Affairs",
+        "Software Engineering",
+        "Web Development",
+        "Social Media Marketing",
+        "Customer Success",
+        "Marketing",
+        "Product Management",
+        "Software Architecture",
+        "Business Intelligence (BI)",
+        "Data Science",
+        "Enterpreneurship"
+      ],
+      "url": "https://www.calcalistech.com/ctechnews/article/bj9qt8hzt",
+      "type": "Product Management"
+    },
+    {
+      "name": "Shopify Bill Pay",
+      "entity": "Shopify",
+      "startDate": "2022",
+      "endDate": "2023",
+      "roles": [
+        "Technical Lead",
+        "Software Engineer"
+      ],
+      "description": "Comprehensive bill payment solution integrated into the Shopify admin, allowing merchants to easily schedule, pay, and manage business bills.",
+      "highlights": [
+        "Served as Technical Lead for the development and implementation of Shopify's Bill Pay feature",
+        "Engineered a system that supports multiple payment methods, including Shopify Balance, bank transfers, and credit cards",
+        "Implemented integrations with Gmail, QuickBooks® Online, and Stocky for seamless bill management and synchronization"
+      ],
+      "keywords": [
+        "FinTech",
+        "Payment Processing",
+        "E-commerce",
+        "Financial Management",
+        "API Integration",
+        "React",
+        "Node.js",
+        "TypeScript",
+        "MySQL",
+        "Amazon Web Services (AWS)",
+        "Software Engineering",
+        "Web Development",
+        "Data Analysis",
+        "Serverless Computing"
+      ],
+      "url": "https://www.shopify.com/bill-pay",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Melio Network",
+      "entity": "Melio",
+      "roles": [
+        "Tech Lead",
+        "Project Manager"
+      ],
+      "description": "Comprehensive vendor data management and payment system, streamlining bill payments for businesses while allowing vendors to manage their payment details across multiple payers.",
+      "startDate": "2021",
+      "endDate": "2022",
+      "highlights": [
+        "Managed and developed a system merging, validating, and managing vendor data for efficient bill payments",
+        "Successfully remodeled the database without disrupting operations for 400 engineers and millions of customers",
+        "Developed efficient vendor matching algorithms, product flows, and fraud detection machine learning models",
+        "Integrated major systems including Mastercard's Billers, Apple Card vendors, and Quickbooks Vendors",
+        "Led a team of 4 as tech lead and project manager, completing the 6-month project on schedule"
+      ],
+      "keywords": [
+        "FinTech",
+        "Payment Processing",
+        "Database Management",
+        "Machine Learning",
+        "Vendor Management",
+        "Team Leadership",
+        "Software Engineering",
+        "Web Development",
+        "Data Analysis",
+        "Serverless Computing",
+        "Data Science",
+        "Node.js",
+        "Amazon Web Services (AWS)",
+        "Serverless Computing",
+        "React",
+        "TypeScript"
+      ],
+      "url": "https://meliopayments.com/melio-network/",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "International Payments",
+      "entity": "Melio",
+      "roles": [
+        "Project Manager",
+        "Technical Lead"
+      ],
+      "description": "Streamlined international payments system, allowing customers to perform overseas payments without complex forms.",
+      "startDate": "2020",
+      "endDate": "2021",
+      "highlights": [
+        "Managed and developed a user-friendly international payments system, simplifying cross-border transactions",
+        "Collaborated with product managers to gather technical requirements, ensuring compliance with international trade agreements",
+        "Developed both serverless payment infrastructure and web product for seamless integration",
+        "Became the company's primary knowledge source on international payments requirements and issues",
+        "Coordinated cross-functional across four engineering departments, including product, design, and operations"
+      ],
+      "keywords": [
+        "FinTech",
+        "International Payments",
+        "Compliance",
+        "Serverless Architecture",
+        "Web Development",
+        "Project Management",
+        "Technical Leadership",
+        "API Integration",
+        "Cash Flow Management",
+        "User Experience Design",
+        "Cross-border Transactions",
+        "Financial Software Development",
+        "Software Engineering",
+        "Web Development",
+        "Serverless Computing",
+        "Amazon Web Services (AWS)",
+        "React",
+        "TypeScript",
+        "Go",
+        "Internal Tools"
+      ],
+      "url": "https://meliopayments.com/international-payments/",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Luke",
+      "entity": "RealFriend",
+      "roles": [
+        "Team Lead",
+        "Sofware Engineer",
+        "Data Scientist",
+        "AI Specialist"
+      ],
+      "description": "Innovative AI-powered real estate chatbot named Luke, capable of assisting thousands of users simultaneously in their property search and purchase process.",
+      "startDate": "2018",
+      "endDate": "2018",
+      "highlights": [
+        "Developed live production AI CRM and front-facing experiences using a fully integrated Next.js, Apollo, MongoDB, and GraphQL stack",
+        "Trained and managed CRF models for free-form data extraction and chat comprehension",
+        "Developed expert-hybrid AI conversational agents without relying on large language models (LLMs)",
+        "Created an AI system capable of handling complex real estate queries, including property details, neighborhood information, and financial requirements",
+        "Implemented features allowing Luke to interact with 40,000+ users, resulting in 1,000+ signed leases",
+        "Designed Luke to provide personalized property recommendations based on user preferences and requirements"
+      ],
+      "keywords": [
+        "Artificial Intelligence (AI)",
+        "Natural Language Processing",
+        "Chatbot Development",
+        "Next.js",
+        "Apollo",
+        "MongoDB",
+        "GraphQL",
+        "CRF Models",
+        "Real Estate Technology",
+        "User Experience Design",
+        "Data Extraction",
+        "Conversational UI",
+        "CRM",
+        "Software Engineering",
+        "Web Development",
+        "Real Estate",
+        "Machine Learning",
+        "Customer Success"
+      ],
+      "url": "https://nypost.com/2020/10/21/i-bought-a-1-15m-nyc-apartment-from-a-robot/",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Intelligent School Selection",
+      "entity": "Regeringskansliet, Utbildningsdepartementet",
+      "roles": [
+        "Consultant",
+        "Generative Design Expert"
+      ],
+      "description": "Generative, interactive, high-scale web application to address educational stratification and inequality in Stockholm.",
+      "startDate": "2018",
+      "endDate": "2018",
+      "highlights": [
+        "Consulted on the design, architecture, and implementation of a generative, interactive, high-scale web application to address educational stratification and inequality in Stockholm.",
+        "Designed a predictive model to forecast student achievements based on historical records and school performance data",
+        "Contributed to significant improvements in overall student achievements in Stockholm over a 4-year period",
+        "Utilized big data analysis and machine learning techniques to provide personalized school recommendations"
+      ],
+      "keywords": [
+        "Educational Technology",
+        "Predictive Modeling",
+        "Generative Design",
+        "Procedural Generation",
+        "Data Analysis",
+        "Data Science",
+        "Machine Learning",
+        "Public Policy",
+        "User Experience Design"
+      ],
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Fishing Infrastructure Optimization",
+      "entity": "Ministry of Agriculture, Fisheries and Food (MAFF)",
+      "roles": [
+        "Project Manager",
+        "Research Analyst",
+        "Algorithm Developer",
+        "Software Engineer",
+        "Data Scientist",
+        "Researcher"
+      ],
+      "startDate": "2018",
+      "endDate": "2019",
+      "highlights": [
+        "Led a comprehensive study and infrastructure planning project to support small fishing businesses in south England, resulting in enacted legislation for long-term development.",
+        "Analyzed 100 years of historical data on fishing quotas, trade, and transportation to address unfair competition from large fishing conglomerates",
+        "Developed procedural generation algorithms to create ideal infrastructural planning for small fishing businesses",
+        "Designed a 50-year Tax Code plan, including government subsidies, to incentivize long-term land development for fishing infrastructure",
+        "Managed the project from research phase through to legal proposal, including drawing technical and legal requirements",
+        "Created plans for strategic development of Docks, Weighing Stations, Half-way Logistical Hubs, and Transportation centers",
+        "Contributed to the write-up of the legal proposal, which was successfully enacted into law in 2019"
+      ],
+      "keywords": [
+        "Maritime Infrastructure",
+        "Data Analysis",
+        "Data Science",
+        "Procedural Generation",
+        "Generative Design",
+        "Tax Code Planning",
+        "Landscape Urbanism",
+        "Architecture",
+        "Policy Development",
+        "Project Management",
+        "Algorithm Development",
+        "Sustainable Development",
+        "Economic Planning",
+        "Government Policy",
+        "Machine Learning"
+      ],
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Organic Style Transfer",
+      "entity": "Lightricks",
+      "roles": [
+        "Prototyping Engineer"
+      ],
+      "description": "Innovative AI-powered image style transfer feature for Photoleap, enabling users to apply artistic styles and color grading to photos with ease by following organic craft processes.",
+      "startDate": "2018",
+      "endDate": "2018",
+      "highlights": [
+        "Researched, managed, and developed a production-level, separable style transfer feature that imitates real-life craft processes",
+        "Orchestrated an automated, visual quality testing and verification system to ensure consistent results",
+        "Designed the first multi-network AI-powered photo editing solution in the market",
+        "Implemented color grading capabilities to streamline editing workflows for professionals and content creators",
+        "Developed features for batch processing, allowing users to apply consistent styles across multiple images efficiently",
+        "Created a system that supports both preset styles and user-uploaded reference images for maximum flexibility",
+        "Developed a neural network engine to run on legacy iPhone CPUs"
+      ],
+      "keywords": [
+        "Artificial Intelligence (AI)",
+        "Image Processing",
+        "Style Transfer",
+        "Machine Learning",
+        "Photo Editing",
+        "User Experience Design",
+        "Product Design",
+        "Visual Quality Assurance",
+        "Mobile App Development",
+        "Software Engineering",
+        "iOS Development",
+        "Data Science",
+        "Data Engineering",
+        "Objective-C",
+        "Swift",
+        "Neural Networks"
+      ],
+      "url": "https://www.photoleapapp.com/features/ai-style-transfer",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "Welcome to Stanistan",
+      "entity": "Print Screen International Design Festival",
+      "roles": [
+        "Lead Developer",
+        "Game Designer",
+        "Software Engineer",
+        "Product Manager",
+        "Researcher"
+      ],
+      "startDate": "2018",
+      "endDate": "2018",
+      "description": "Award-winning PC game that satirizes social media management and tourism promotion for a fictional struggling country, highlighting the disconnect between online representation and reality.",
+      "highlights": [
+        "Served as lead developer and game designer, winning first place at the Print Screen International Design Festival",
+        "Designed and implemented game mechanics simulating social media management and tourism promotion",
+        "Engineered a hyper-texture GPU-readback caching engine to enhance game performance",
+        "Developed an aestetic classification model to score the photos taken by the player based on cognitive models"
+      ],
+      "keywords": [
+        "Game Development",
+        "Social Commentary",
+        "GPU Engineering",
+        "Award-Winning",
+        "Interactive Design",
+        "3D Graphics",
+        "Game Design",
+        "Software Engineering",
+        "Machine Learning",
+        "Artificial Intelligence (AI)",
+        "Computer Graphics",
+        "User Experience",
+        "User Interface Design"
+      ],
+      "url": "https://www.ophirsheriff.com/stanistan",
+      "type": "Software Engineering"
+    },
+    {
+      "name": "SIMPLI",
+      "entity": "Appgrading Society Challenge",
+      "roles": [
+        "Product Manager",
+        "Product Designer",
+        "Project Lead",
+        "Researcher"
+      ],
+      "startDate": "2015",
+      "endDate": "2015",
+      "description": "Innovative Android UI abstraction layer designed to make smartphones more accessible and user-friendly for the elderly population, winning second place in the 'Appgrading Society Challenge'.",
+      "highlights": [
+        "Spearheaded product design, management, customer research, and academic research for a groundbreaking mobile UI solution",
+        "Developed a containerization technology that interpolates app inputs and outputs to create a standardized, elderly-friendly UI experience",
+        "Integrated a machine learning hybrid-expert customer support assistant named 'Ezra' to provide continuous user guidance",
+        "Project won second place in the 'Appgrading Society Challenge', with the technology and patent subsequently acquired by Google"
+      ],
+      "keywords": [
+        "Product Management",
+        "Product Design",
+        "UI/UX Design",
+        "Accessibility",
+        "Android Development",
+        "Machine Learning",
+        "Product Management",
+        "Software Engineering",
+        "Artificial Intelligence (AI)",
+        "Data Analysis",
+        "User Experience",
+        "User Interface Design",
+        "Sales",
+        "Marketing",
+        "Enterpreneurship",
+        "Research",
+        "Human Computer Interaction (HCI)",
+        "Generative Design",
+        "Procedural Generation"
+      ],
+      "type": "Design"
+    },
+    {
+      "name": "Enterprise Code Quality",
+      "entity": "Red Hat",
+      "roles": [
+        "Software Architect",
+        "Project Lead",
+        "Software Engineer",
+        "Solution Architect",
+        "Product Manager"
+      ],
+      "startDate": "2016",
+      "endDate": "2018",
+      "description": "The code quality analysis framework allows RedHat to identify and address issues in code before they become critical security vulnerabilities.",
+      "highlights": [
+        "Led the development of a comprehensive code quality analysis framework as part of RedHat's Quality 360 system",
+        "Architected and managed the development of a company-wide code quality analysis framework",
+        "Implemented normalized quality metrics for hundreds of projects across 13,000 employees",
+        "Established the groundwork for RedHat's current secure development lifecycle and testing practices"
+      ],
+      "url": "https://access.redhat.com/security_testing_sdl_practice",
+      "keywords": [
+        "Software Architecture",
+        "Code Quality",
+        "Static Analysis",
+        "Security Testing",
+        "Enterprise Software",
+        "Dynamic Analysis",
+        "Penetration Testing",
+        "Data Analysis",
+        "Software Engineering",
+        "Cloud Computing",
+        "Product Management",
+        "Statistical Analysis",
+        "Data Visualization"
+      ],
+      "type": "Software Engineering"
+    },
+    {
       "name": "Perennial High-School Cyber Program",
-      "startDate": "2015-12-31",
-      "summary": "The development and maintenance of a perennial high-school cyber/cryptography program for the Ministry of Education.",
-      "url": null,
-      "endDate": "2015-12-31"
+      "roles": [
+        "Pedagogical Manager",
+        "Project Manager",
+        "Teacher"
+      ],
+      "entity": "Ministry of Education",
+      "startDate": "2015",
+      "endDate": "2016",
+      "highlights": [
+        "Developed and maintained a perennial high-school cyber/cryptography program for the Ministry of Education.",
+        "Trained and mentored teachers in the use of computers, programming, and cyber/cryptography."
+      ],
+      "keywords": [
+        "Computer Science",
+        "Cyber/Cryptography",
+        "Educational Technology",
+        "Teaching",
+        "Pedagogical Management"
+      ],
+      "type": "Education"
+    },
+    {
+      "name": "Political Activist Mobilization Telegram Bot",
+      "entity": "Likud / Labor",
+      "roles": [
+        "Software Engineer",
+        "Political Researcher"
+      ],
+      "description": "Bot that mobilizes political activists to coordinate organic messaging distribution.",
+      "startDate": "2015",
+      "endDate": "2015",
+      "highlights": [
+        "Developed a bot that mobilizes political activists to coordinate organic messaging distribution.",
+        "Implemented a system that allows activists to create and share content with a large audience.",
+        "Mobilized thousands of activists on Facebook and Messaging apps."
+      ],
+      "keywords": [
+        "Software Engineering",
+        "Public Affairs",
+        "Community Mobilization",
+        "Social Media",
+        "Bot Development",
+        "Data Analysis",
+        "User Experience Design",
+        "Political Research",
+        "Political Campaign"
+      ]
+    },
+    {
+      "name": "Tel Aviv University Rebranding",
+      "entity": "Tel Aviv University",
+      "roles": [
+        "Creative Manager",
+        "Marketing Designer",
+        "Branding Designer",
+        "Social Media Manager",
+        "Software Engineer"
+      ],
+      "startDate": "2013",
+      "endDate": "2014",
+      "highlights": [
+        "Developed a branding strategy for the university, including a new logo, website, and social media presence",
+        "Designed and developed a new website for the university, featuring a modern, user-friendly interface",
+        "Created a new brand identity for the university, including a new logo and branding guidelines",
+        "Developed and managed a social media strategy for the university, including a new social media presence and content strategy"
+      ],
+      "keywords": [
+        "Branding",
+        "Web Design",
+        "Graphic Design",
+        "Social Media",
+        "User Experience Design",
+        "Brand Identity",
+        "Website Development",
+        "Marketing Strategy",
+        "User Interface Design",
+        "Branding Guidelines",
+        "Software Engineering",
+        "Creative Management"
+      ],
+      "type": "Design"
+    },
+    {
+      "name": "2013 Israeli Legislative Elections",
+      "entity": "Yesh Atid / Likud / Labor",
+      "roles": [
+        "Creative Manager",
+        "Art Director",
+        "Digital Marketing Specialist",
+        "Branding Designer",
+        "Social Media Manager",
+        "Software Engineer"
+      ],
+      "startDate": "2013",
+      "endDate": "2013",
+      "highlights": [
+        "Produced the websites, social media accounts and digital marketing campaigns for the top 3 political parties in Israel.",
+        "Developed and managed the branding strategy for the top 3 political parties in Israel.",
+        "Designed the brand identity of the Yesh Atid party on their first election campaign."
+      ],
+      "keywords": [
+        "Branding",
+        "Web Design",
+        "Web Development",
+        "Graphic Design",
+        "Social Media",
+        "Brand Identity",
+        "Marketing Strategy",
+        "Digital Marketing",
+        "Software Engineering",
+        "Public Affairs",
+        "Political Campaign",
+        "Social Media Marketing"
+      ],
+      "type": "Design"
+    },
+    {
+      "name": "Goldstar Public Perception Campaign",
+      "entity": "McCann Worldgroup",
+      "description": "Public perception campaign to rebrand Goldstar as the beer of the people.",
+      "roles": [
+        "Art Director"
+      ],
+      "startDate": "2012",
+      "endDate": "2012",
+      "highlights": [
+        "Developed and long-term, multi-stage public perception campaign to rebrand Goldstar as the beer of the people.",
+        "Modernized the brand logo and typographical identity.",
+        "Produced a public upheaval campaign to promote the brand."
+      ],
+      "keywords": [
+        "Branding",
+        "Graphic Design",
+        "Brand Identity",
+        "Public Affairs",
+        "Social Media Marketing",
+        "Public Perception Campaign",
+        "Marketing Strategy",
+        "Art Direction",
+        "Typography"
+      ],
+      "type": "Design"
     }
   ],
   "awards": [
     {
-      "title": "Moshal Scholar",
-      "date": "2015-10-31",
+      "title": "Presidential Award for Volunteerism, Public Diplomacy Project",
+      "date": "2024",
+      "awarder": "President of Israel",
+      "summary": "Recognized for outstanding contributions to public diplomacy efforts and volunteer work."
+    },
+    {
+      "title": "First Place",
+      "date": "2018",
+      "awarder": "Print Screen International Design Festival",
+      "summary": "Won first place for the game 'Welcome to Stanistan', a satirical PC game about social media management and tourism promotion for a fictional struggling country."
+    },
+    {
+      "title": "Second Place",
+      "date": "2015",
+      "awarder": "Appgrading Society Challenge",
+      "summary": "Won second place for SIMPLI, an innovative Android UI abstraction layer designed to make smartphones more accessible and user-friendly for the elderly population."
+    },
+    {
+      "title": "Moshal Scholarship",
+      "date": "2015",
       "awarder": "Moshal Scholarship Program",
       "summary": "Awarded a Moshal Scholarship intended to support tenacious and determined students from challenging backgrounds, to obtain high quality, sought-after degrees that lead to successful careers."
+    },
+    {
+      "title": "President's Medal of Exemplary Service, Navy",
+      "date": "2011",
+      "awarder": "President of Israel",
+      "summary": "Honored with the highest recognition for exceptional service and dedication in the Israeli Navy."
     }
   ],
   "skills": [
     {
-      "name": "Community Management",
-      "level": "",
-      "keywords": []
+      "name": "Software Engineering",
+      "level": "Master",
+      "keywords": [
+        "Node.js",
+        "Python",
+        "Amazon Web Services (AWS)",
+        "Serverless Computing",
+        "MySQL",
+        "API Development",
+        "Microservices",
+        "R",
+        "PHP",
+        "SQL",
+        "HTML/CSS",
+        "LESS",
+        "Python",
+        "Java",
+        "Go",
+        "C/C++",
+        "JavaScript",
+        "Typescript",
+        "Ruby",
+        "Kotlin",
+        "GraphQL",
+        "Kubernetes",
+        "Docker",
+        "Ansible",
+        "Vagrant",
+        "Terraform",
+        "OpenShift",
+        "React",
+        "React Native",
+        "Redux",
+        "iOS",
+        "Android",
+        "p5.js",
+        "Processing",
+        "Wiring",
+        "ThreeJS",
+        "Webpack",
+        "WebGL",
+        "OpenCV",
+        "scikit-learn",
+        "MongoDB",
+        "Redis",
+        "RabbitMQ",
+        "Kafka",
+        "ElasticSearch",
+        "Flutter",
+        "Swift",
+        "Kotlin",
+        "Objective-C",
+        "Rust"
+      ]
     },
     {
-      "name": "Product Leadership",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Public Affairs",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Artificial Intelligence (AI)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "English",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Web Design",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Social Media",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Business Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Programming",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Amazon Web Services (AWS)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "C",
-      "level": "",
-      "keywords": []
+      "name": "Design",
+      "level": "Master",
+      "keywords": [
+        "Graphic Design",
+        "UI/UX Design",
+        "Branding",
+        "Web Design",
+        "Digital Marketing",
+        "Product Design",
+        "Human Computer Interaction (HCI)",
+        "Game Design",
+        "Marketing Strategy",
+        "Visual Communication"
+      ]
     },
     {
       "name": "Research",
-      "level": "",
-      "keywords": []
+      "level": "Proficient",
+      "keywords": [
+        "Machine Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Neural Networks",
+        "AI-powered Applications",
+        "Data Analysis",
+        "Statistical Analysis",
+        "Data Visualization",
+        "Big Data",
+        "Predictive Modeling",
+        "Research Methods",
+        "Artificial Intelligence (AI)",
+        "Human Computer Interaction (HCI)",
+        "Computer Science",
+        "Generative Design",
+        "Procedural Generation",
+        "Signal Processing",
+        "Image Processing"
+      ]
     },
     {
-      "name": "Leadership",
-      "level": "",
-      "keywords": []
+      "name": "Public Affairs",
+      "level": "Proficient",
+      "keywords": [
+        "Public Diplomacy",
+        "Political Campaigns",
+        "Social Media Strategy",
+        "Community Mobilization"
+      ]
     },
     {
-      "name": "Python",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Advertising",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "React.js",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Social Media Marketing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Revenue Analysis",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Digital Marketing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Node.js",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Software Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Educational Technology",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "TypeScript",
-      "level": "",
-      "keywords": []
+      "name": "Education",
+      "level": "Proficient",
+      "keywords": [
+        "Curriculum Development",
+        "Pedagogical Management",
+        "Educational Technology",
+        "Mentoring"
+      ]
     },
     {
       "name": "Product Management",
-      "level": "",
-      "keywords": []
+      "level": "Intermediate",
+      "keywords": [
+        "Agile Methodologies",
+        "Product Strategy",
+        "Product Roadmapping",
+        "Stakeholder Management",
+        "Market Research",
+        "User Experience (UX)",
+        "Product Roadmapping",
+        "Stakeholder Management",
+        "Agile Project Management",
+        "Cross-functional Coordination",
+        "Business Intelligence (BI)",
+        "Business Development",
+      ]
     },
     {
-      "name": "Java",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Serverless Computing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "C++",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Business Intelligence (BI)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Photoshop",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Engineering Management",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Web Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Customer Success",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Management",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Software Architecture",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Copywriting",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Ad Serving",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Data Analysis",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Start-up Leadership",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Publishing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "SQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Teaching",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Mentorship",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Mathematics Education",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Team Leadership",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Facebook",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Business Strategy",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Logo Design",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Editing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Art Direction",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Graphic Design",
-      "level": "",
-      "keywords": []
+      "name": "Leadership",
+      "level": "Intermediate",
+      "keywords": [
+        "Team Leadership",
+        "Agile Project Management",
+        "Cross-functional Coordination",
+        "Risk Management",
+        "Organizational Development",
+        "Team Building",
+        "Strategic Planning"
+      ]
     }
   ],
   "languages": [
     {
-      "fluency": "Native Speaker",
+      "fluency": "Full professional proficiency",
       "language": "English"
     },
     {
-      "fluency": "Native Speaker",
+      "fluency": "Full professional proficiency",
       "language": "Hebrew"
     }
-  ],
-
-  "meta": {
-    "version": "v1.0.0",
-    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
-  }
+  ]
 }
