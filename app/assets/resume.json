@@ -102,8 +102,8 @@
       "startDate": "2017",
       "endDate": "2020",
       "courses": [
-        "Multilinear Constraints Systems",
-        "Neaural Networks and Deep Learning",
+        "Multi-linear Constraints Systems",
+        "Neural Networks and Deep Learning",
         "Procedural Approaches to Generative Design",
         "Approximation Theory",
         "Educational Games"
@@ -118,7 +118,7 @@
       "endDate": "2024",
       "highlights": [
         "Led the development of Spark, a mobile app designed to gamify the mobilization of NGO activists, enhancing engagement and distribution of public affairs content.",
-        "Directed cross-disciplinary teams in creating interactive and user-friendly app features that incentivize community growth and active participation.",
+        "Directed cross-disciplinary teams in creating interactive and user-friendly app features that incentives community growth and active participation.",
         "Collaborated with NGOs to understand their needs, ensuring the platform effectively supports their initiatives and maximizes community impact.",
         "Piloted user feedback loops to refine app functionalities, ensuring alignment with user expectations and campaign effectiveness."
       ],
@@ -412,7 +412,7 @@
       "description": "The Side Project Club is a weekly meetup at the Facebook offices in Tel Aviv. We meet to discuss and brainstorm ideas for side-projects, share knowledge, and collaborate on projects.",
       "highlights": [
         "Mentored members in various side-projects, including a data science project, a web development project, and a mobile app project",
-        "Provided guidance and support to memebers in selecting projects, setting goals, and overcoming challenges",
+        "Provided guidance and support to members in selecting projects, setting goals, and overcoming challenges",
         "Collaborated with members to develop their portfolios and showcase their projects on LinkedIn"
       ]
     },
@@ -451,7 +451,7 @@
       "endDate": "2024",
       "highlights": [
         "Led the development of Spark, a mobile app designed to gamify the mobilization of NGO activists, enhancing engagement and distribution of public affairs content.",
-        "Directed cross-disciplinary teams in creating interactive and user-friendly app features that incentivize community growth and active participation.",
+        "Directed cross-disciplinary teams in creating interactive and user-friendly app features that incentives community growth and active participation.",
         "Collaborated with NGOs to understand their needs, ensuring the platform effectively supports their initiatives and maximizes community impact.",
         "Piloted user feedback loops to refine app functionalities, ensuring alignment with user expectations and campaign effectiveness."
       ],
@@ -473,10 +473,10 @@
         "Software Architecture",
         "Business Intelligence (BI)",
         "Data Science",
-        "Enterpreneurship"
+        "Entrepreneurship"
       ],
-      url: "https://www.sparkstudio.app/",
-      type: "Product Management"
+      "url": "https://www.sparkstudio.app/",
+      "type": "Product Management"
     },
     {
       "name": "Words of Iron",
@@ -490,7 +490,7 @@
       "endDate": "2024",
       "highlights": [
         "Developed Words of Iron, a pioneering project with 1M that aims to address online hate-speech by empowering individuals to deliver factual information to key audiences",
-        "Managed and grew a thriving team that maintains the engieering and operations of platform"
+        "Managed and grew a thriving team that maintains the engineering and operations of platform"
       ],
       "keywords": [
         "Artificial Intelligence (AI)",
@@ -507,7 +507,7 @@
         "Software Architecture",
         "Business Intelligence (BI)",
         "Data Science",
-        "Enterpreneurship"
+        "Entrepreneurship"
       ],
       "url": "https://www.calcalistech.com/ctechnews/article/bj9qt8hzt",
       "type": "Product Management"
@@ -560,7 +560,7 @@
         "Managed and developed a system merging, validating, and managing vendor data for efficient bill payments",
         "Successfully remodeled the database without disrupting operations for 400 engineers and millions of customers",
         "Developed efficient vendor matching algorithms, product flows, and fraud detection machine learning models",
-        "Integrated major systems including Mastercard's Billers, Apple Card vendors, and Quickbooks Vendors",
+        "Integrated major systems including MasterCard's Billers, Apple Card vendors, and Quickbooks Vendors",
         "Led a team of 4 as tech lead and project manager, completing the 6-month project on schedule"
       ],
       "keywords": [
@@ -631,7 +631,7 @@
       "entity": "RealFriend",
       "roles": [
         "Team Lead",
-        "Sofware Engineer",
+        "Software Engineer",
         "Data Scientist",
         "AI Specialist"
       ],
@@ -715,7 +715,7 @@
         "Led a comprehensive study and infrastructure planning project to support small fishing businesses in south England, resulting in enacted legislation for long-term development.",
         "Analyzed 100 years of historical data on fishing quotas, trade, and transportation to address unfair competition from large fishing conglomerates",
         "Developed procedural generation algorithms to create ideal infrastructural planning for small fishing businesses",
-        "Designed a 50-year Tax Code plan, including government subsidies, to incentivize long-term land development for fishing infrastructure",
+        "Designed a 50-year Tax Code plan, including government subsidies, to incentive long-term land development for fishing infrastructure",
         "Managed the project from research phase through to legal proposal, including drawing technical and legal requirements",
         "Created plans for strategic development of Docks, Weighing Stations, Half-way Logistical Hubs, and Transportation centers",
         "Contributed to the write-up of the legal proposal, which was successfully enacted into law in 2019"
@@ -794,8 +794,8 @@
       "highlights": [
         "Served as lead developer and game designer, winning first place at the Print Screen International Design Festival",
         "Designed and implemented game mechanics simulating social media management and tourism promotion",
-        "Engineered a hyper-texture GPU-readback caching engine to enhance game performance",
-        "Developed an aestetic classification model to score the photos taken by the player based on cognitive models"
+        "Engineered a hyper-texture GPU-read-back caching engine to enhance game performance",
+        "Developed an aesthetic classification model to score the photos taken by the player based on cognitive models"
       ],
       "keywords": [
         "Game Development",
@@ -848,7 +848,7 @@
         "User Interface Design",
         "Sales",
         "Marketing",
-        "Enterpreneurship",
+        "Entrepreneurship",
         "Research",
         "Human Computer Interaction (HCI)",
         "Generative Design",
@@ -1203,7 +1203,7 @@
         "Agile Project Management",
         "Cross-functional Coordination",
         "Business Intelligence (BI)",
-        "Business Development",
+        "Business Development"
       ]
     },
     {
