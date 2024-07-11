@@ -141,7 +141,7 @@
       "type": "Product Management"
     },
     {
-      "name": "Alta Revenue Platform",
+      "name": "Alta",
       "position": "Technical Product Manager",
       "startDate": "2023",
       "endDate": "2024",
@@ -258,6 +258,7 @@
       "position": "Software Architect, Central-CI",
       "startDate": "2016",
       "endDate": "2018",
+      "location": "Raanana, Israel",
       "highlights": [
         "Designed, developed and managed a centralized code quality analysis and publishing framework and workflow",
         "Worked with popular CI and virtualization tools such as: Jenkins, Docker, Ansible, Puppet, OpenShift, OpenStack and more, for deployment and automation purposes"
@@ -405,7 +406,7 @@
       "url": "https://www.linkedin.com/company/datahack/"
     },
     {
-      "organization": "Side Project Club",
+      "organization": "Mento",
       "position": "Mentor",
       "startDate": "2019",
       "endDate": "2020",
@@ -1165,6 +1166,16 @@
       ]
     },
     {
+      "name": "Public Affairs",
+      "level": "Master",
+      "keywords": [
+        "Public Diplomacy",
+        "Political Campaigns",
+        "Social Media Strategy",
+        "Community Mobilization"
+      ]
+    },
+    {
       "name": "Research",
       "level": "Proficient",
       "keywords": [
@@ -1186,16 +1197,6 @@
         "Procedural Generation",
         "Signal Processing",
         "Image Processing"
-      ]
-    },
-    {
-      "name": "Public Affairs",
-      "level": "Proficient",
-      "keywords": [
-        "Public Diplomacy",
-        "Political Campaigns",
-        "Social Media Strategy",
-        "Community Mobilization"
       ]
     },
     {
