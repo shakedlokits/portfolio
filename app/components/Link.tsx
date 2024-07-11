@@ -1,11 +1,19 @@
 import type { PropsWithChildren } from 'react';
+import * as NextLink from 'next/link';
+import { classy } from '@lib/utilities';
 
-export const buttonStyle = 'decoration-yellow-200 decoration-double decoration-2 hover:underline';
-
-export const Link = ({ href, redirect, children }: PropsWithChildren<{ href: string, redirect?: boolean }>) => {
+export const Link = ({ href, redirect, children, className }: PropsWithChildren<{
+  href: string,
+  redirect?: boolean,
+  className?: string
+}>) => {
   return (
-    <a className={buttonStyle} href={href} target={redirect ? "_blank" : undefined}  rel="noreferrer">
+    <NextLink.default
+      className={classy('hover:decoration-yellow-200 hover:decoration-double hover:decoration-2 hover:underline hover:underline-offset-0 hover:[text-decoration-skip-ink:none]', className)}
+      href={href}
+      target={redirect ? '_blank' : undefined} rel="noreferrer">
       {children}
-    </a>
+    </NextLink.default>
   );
 };
+

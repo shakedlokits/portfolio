@@ -1,9 +1,11 @@
 import me from '../assets/me.jpg';
 import Image from 'next/image'
+import { Header } from '@components/Header';
 
 const About = () => {
   return (
     <>
+      <Header />
       <p>
         Armed with a triple-major for Computer Science, Education and Visual Communication at the Hebrew University of
         Jerusalem and Bezalel Academy for Arts and Design. I am very interested in utilizing interdisciplinary solutions

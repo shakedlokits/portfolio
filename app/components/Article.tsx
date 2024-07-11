@@ -11,7 +11,7 @@ const Article = ({ entry }: { entry: FeedEntry }) => {
           {entry.title}
         </Link>
       </h2>
-      <span className="text-xs hightlight font-header uppercase">
+      <span className="text-xs highlight font-header uppercase">
         {entry.type}, {format(new Date(entry.date), 'MMM do, yyyy')}
       </span>
       <div className="h-[2px] bg-black block relative align-left w-2/3 my-2" />

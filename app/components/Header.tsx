@@ -1,9 +1,11 @@
 'use client';
 import format from 'date-fns/format';
 import { Link } from './Link';
-import { useState } from 'react';
-import { useWttr } from '@lib/hooks';
+import { useCountry, useWttr } from '@lib/hooks';
+import { Menu } from '@components/Menu';
+import { Title } from '@components/Title';
 import type { StockData } from '@lib/server';
+import Typewriter from 'typewriter-effect';
 
 const formatTicker = ({ uplift }: StockData) => {
   const { sign, arrow, color } = (() => {
@@ -16,7 +18,7 @@ const formatTicker = ({ uplift }: StockData) => {
     } else {
       if (uplift < 0) {
         return {
-          sign: '-',
+          sign: '',
           arrow: '↓',
           color: 'text-red-500',
         } as const;
@@ -31,60 +33,77 @@ const formatTicker = ({ uplift }: StockData) => {
   return { ticker, tickerColor: color };
 };
 
-const MenuIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6 inline"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
-);
+const HeaderTitle = () => {
+  return (
+    <Title>
+      <Title.TitleBody>
+        Hi! I’m Shaked Lokits,<br />Technically&nbsp;
+        <br className="sm:hidden inline" />
+        <span className="highlight inline whitespace-nowrap after:content-['']">
+          <Typewriter
+            options={{
+              strings: [
+                'a Developer',
+                'an Artist',
+                'a Teacher',
+                'a Designer',
+                'a Sailor',
+                'an Engineer',
+                'a Researcher',
+              ],
+              autoStart: true,
+              loop: true,
+              cursorClassName: 'highlight',
+            }}
+          />
+        </span>
+      </Title.TitleBody>
+      <Title.TitleByline byline="*Well, it’s complicated" />
+    </Title>
+  );
+};
 
-export const Header = ({ stock }: { stock: StockData }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const HeaderMenu = ({ stock }: { stock: StockData }) => {
   const weather = useWttr();
+  const country = useCountry();
 
-  const day = `Tel Aviv, ${format(new Date(), 'eeee')}, `;
+  const day = `${country}, ${format(new Date(), 'eeee')}, `;
   const date = format(new Date(), 'MMMM d, yyyy');
   const { ticker, tickerColor } = formatTicker(stock);
 
   return (
-    <header>
-      <div className="flex flex-row justify-between border-black border-b-4 border-t-2 py-1">
-        <p className="sm:inline hidden text-[1rem] uppercase">
+    <Menu>
+      <Menu.PrimaryRow>
+        <p className="sm:inline hidden">
           S&P 500&nbsp;<span className={tickerColor}>{ticker}</span>
         </p>
-        <div className="text-[1rem] uppercase">
+        <div>
           <p className="sm:inline hidden">{day}</p>
           <p className="inline">{date}</p>
         </div>
+        <p className="inline text-[1rem]">{weather}</p>
+      </Menu.PrimaryRow>
+      <Menu.SecondaryRow>
+        <Link href={'/about'} >Editor&apos;s Note</Link>
+        <Link href="https://www.linkedin.com/in/shaked-lokits/" redirect className="sm:inline hidden">
+          Contact Me
+        </Link>
+        <Link href={'/mentoring'} redirect className="highlight">
+          Free Mentoring
+        </Link>
+        <Link href="https://spaceflightnow.com/launch-schedule/" redirect className="sm:inline hidden">
+          Upcoming Space Launch
+        </Link>
+      </Menu.SecondaryRow>
+    </Menu>
+  );
+};
 
-        <p className="inline text-[1rem] uppercase">{weather}</p>
-      </div>
-      <div className="flex flex-row justify-between border-black border-double border-b-6 py-1 mb-8 pt-2">
-        <span className="text-[1rem] uppercase inline font-bold">
-          <Link href="/about">Editor&apos;s Note</Link>
-        </span>
-        <span className="text-[1rem] uppercase sm:inline hidden font-bold">
-          <Link href="https://www.linkedin.com/in/shaked-lokits/" redirect>
-            Contact Me
-          </Link>
-        </span>
-        <span className="text-[1rem] uppercase inline font-bold hightlight">
-          <Link href="/mentoring" redirect>
-            Free Mentoring
-          </Link>
-        </span>
-        <span className="text-[1rem] uppercase sm:inline hidden font-bold">
-          <Link href="https://spaceflightnow.com/launch-schedule/" redirect>
-            Upcoming Space Launch
-          </Link>
-        </span>
-      </div>
-    </header>
+export const Header = ({ stock, menu }: { stock?: StockData, menu?: boolean }) => {
+  return (
+    <>
+      <HeaderTitle />
+      {menu && stock && <HeaderMenu stock={stock} />}
+    </>
   );
 };

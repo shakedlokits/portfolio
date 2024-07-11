@@ -1,31 +1,25 @@
-"use client";
-import Typewriter from 'typewriter-effect';
+import { ReactNode } from 'react';
 
-export const Title = ({ funny }: { funny?: boolean }) => {  
+const Title = ({ children }: { children: ReactNode }) => {
   return (
     <div className="pb-8">
-      <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1] ">
-        Hi! I’m Shaked Lokits,<br />Technically&nbsp;
-        <br className='sm:hidden inline' />
-        <span className="hightlight inline whitespace-nowrap">
-          <Typewriter
-            options={{
-              strings: [
-                'a Developer',
-                'an Artist',
-                'a Teacher',
-                'a Designer',
-                'a Sailor',
-                'an Engineer',
-                'a Researcher',
-              ],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </span>
-      </h1>
-      {funny && <p className="sm:left-8 left-4 relative sm:pt-0 pt-2">*Well, it’s complicated</p>}
+      {children}
     </div>
   );
 };
+
+Title.TitleByline = function TitleByline({ byline }: { byline: string }) {
+  return (
+    <p className="sm:left-8 left-4 relative sm:pt-0 pt-2">{byline}</p>
+  );
+};
+
+Title.TitleBody = function TitleBody({ children }: { children: ReactNode }) {
+  return (
+    <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1]">
+      {children}
+    </h1>
+  );
+};
+
+export { Title };

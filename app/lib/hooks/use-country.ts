@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 
 export const useCountry = (): string => {
-  const [country, setCountry] = useState<string>('Israel');
+  const [country, setCountry] = useState<string>('Germany');
 
   useEffect(() => {
     const fetchLocation = async () => {
-      const res = await fetch('https://api.myip.com');
+      const res = await fetch('https://freeipapi.com/api/json', { cache: 'force-cache' });
       const data = await res.json();
-      setCountry(data.country);
+      setCountry(data.countryName);
     };
-    fetchLocation();
+    void fetchLocation();
   }, []);
 
   return country;

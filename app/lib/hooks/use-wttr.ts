@@ -5,11 +5,11 @@ export const useWttr = (): string => {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      const res = await fetch('https://wttr.in?format=%f+%c');
+      const res = await fetch('https://wttr.in?format=%f+%c', { cache: 'force-cache' });
       const data = await res.text();
       setWeather(data);
     };
-    fetchWeather();
+    void fetchWeather();
   }, []);
 
   return weather;

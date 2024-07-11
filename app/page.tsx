@@ -1,8 +1,9 @@
-import { ArticleList } from './components/Article';
-import { Header } from './components/Header';
-import { getArticles } from './lib/server/get-articles';
-import { getStockData } from './lib/server/get-stock-data';
-import { shuffleEntries } from './lib/utilities/utilities';
+import { ArticleList } from '@components/Article';
+import { getArticles } from '@lib/server';
+import { getStockData } from '@lib/server';
+import { shuffleEntries } from '@lib/utilities';
+import { TypewriterTitle } from '@components/TypewriterTitle';
+import { Header } from '@components/Header';
 
 const Home = async () => {
   const {articles, works, projects} = await getArticles();
@@ -11,7 +12,7 @@ const Home = async () => {
 
   return (
     <>
-      <Header stock={stock} />
+      <Header stock={stock} menu />
       <ArticleList entries={entries} />
     </>
   );

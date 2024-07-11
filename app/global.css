@@ -11,20 +11,19 @@
     column-rule: 2px solid black;
   }
 
-  .hightlight {
-    display: inline-block;
-    position: relative;
+  .highlight {
+    text-decoration-color: #FDFF9B;
+    text-decoration-thickness: 100%;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -100%;
+    text-decoration-line: underline;
+    mix-blend-mode: multiply;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
-  .hightlight::before {
-    content: "";
-    position: absolute;
-    width: 95%;
-    height: 60%;
-    top: 40%;
-    left: 12px;
-    background: #FDFF9B;
-    z-index: -1;
+  .highlight::after {
+    content: "\00a0";
   }
 }
 
