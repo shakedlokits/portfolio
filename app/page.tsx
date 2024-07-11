@@ -2,7 +2,6 @@ import { ArticleList } from '@components/Article';
 import { getArticles } from '@lib/server';
 import { getStockData } from '@lib/server';
 import { shuffleEntries } from '@lib/utilities';
-import { TypewriterTitle } from '@components/TypewriterTitle';
 import { Header } from '@components/Header';
 
 const Home = async () => {
