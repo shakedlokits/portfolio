@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 const Title = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="pb-8">
+    <div className="pb-10">
       {children}
     </div>
   );

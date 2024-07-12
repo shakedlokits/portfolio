@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { classy } from '@lib/utilities';
 
 const Menu = ({ children }: { children: ReactNode }) => {
   return (
@@ -16,9 +17,10 @@ Menu.PrimaryRow = function TopRow({ children }: { children: ReactNode }) {
   );
 };
 
-Menu.SecondaryRow = function BottomRow({ children }: { children: ReactNode }) {
+Menu.SecondaryRow = function BottomRow({ children, className }: { children: ReactNode, className?: string }) {
   return (
-    <div className="flex flex-row justify-between border-black border-double border-b-6 py-1 pt-2 font-bold">
+    <div
+      className={classy('flex flex-row justify-between border-black border-double border-b-6 py-1 pt-2 font-bold', className)}>
       {children}
     </div>
   );

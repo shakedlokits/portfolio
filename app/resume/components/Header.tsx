@@ -24,7 +24,7 @@ export const Header = () => {
           </div>
           <p>{new URL(resume.basics.url).hostname.slice(4)}</p>
         </Menu.PrimaryRow>
-        <Menu.SecondaryRow>
+        <Menu.SecondaryRow className="sm:flex hidden">
           <Link href={'#skills'} >Skills</Link>
           <Link href={'#experience'} >Experience</Link>
           <Link href={'#education'} >Education</Link>
