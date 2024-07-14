@@ -25,6 +25,19 @@
   .highlight::after {
     content: "\00a0";
   }
+
+  .text-stroke {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::marker {
+  display: none;
 }
 
 .Typewriter {

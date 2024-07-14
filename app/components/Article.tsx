@@ -2,7 +2,7 @@
 import { Link } from './Link';
 import Image from 'next/image';
 
-const Article = ({ title, byline, content, cover, url }: {
+export const Article = ({ title, byline, content, cover, url }: {
   title: string;
   byline: string;
   content?: string;
@@ -24,8 +24,8 @@ const Article = ({ title, byline, content, cover, url }: {
           <div className="h-[2px] bg-black block relative align-left w-2/3 my-2" />
           {shouldTruncate ? (
             <details className="group">
-              <summary className="text-sm leading-[1.2rem] break-word hyphens-auto mb-3 first:list-none ">
-                <p className="group-open:line-clamp-none line-clamp-6">
+              <summary className="text-sm leading-[1.2rem] break-word hyphens-auto mb-3 first:list-none">
+                <p className="group-open:line-clamp-none line-clamp-6 whitespace-pre-line">
                   {content}
                 </p>
                 <p className="underline font-bold float-right group-open:hidden inline">
@@ -34,24 +34,15 @@ const Article = ({ title, byline, content, cover, url }: {
               </summary>
             </details>
           ) : (
-            <p className="text-sm leading-[1.2rem] break-word hyphens-auto mb-3">
+            <p className="text-sm leading-[1.2rem] break-word hyphens-auto mb-3 whitespace-pre-line">
               {content}
             </p>
           )}
         </>
       )}
-      <Image fill sizes="100vw" className="!relative w-full" src={cover ?? ''} alt={title} />
-      <div className="border-black h-[3px] bg-black block relative w-full my-6" />
+      { cover && <Image fill sizes="100vw" className="!relative w-full" src={cover} alt={title} /> }
+      <div className="border-black h-[3px] bg-black block relative w-full my-4" />
     </article>
   );
 };
 
-export const ArticleList = ({ articles }: { articles: Array<Parameters<typeof Article>[0]> }) => {
-  return (
-    <div className="xl:columns-3 columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px]">
-      {articles.map((entry, index) => (
-        <Article key={index} {...entry} />
-      ))}
-    </div>
-  );
-};

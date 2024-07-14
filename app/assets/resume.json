@@ -242,7 +242,7 @@
       "type": "Software Engineering"
     },
     {
-      "name": "Regeringskansliet, Utbildningsdepartementet",
+      "name": "Swedish Ministry of Education and Research",
       "position": "Software Engineering Consultant",
       "startDate": "2018",
       "endDate": "2018",
@@ -672,7 +672,7 @@
     },
     {
       "name": "Intelligent School Selection",
-      "entity": "Regeringskansliet, Utbildningsdepartementet",
+      "entity": "Swedish Ministry of Education and Research",
       "roles": [
         "Consultant",
         "Generative Design Expert"
