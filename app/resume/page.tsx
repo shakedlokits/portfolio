@@ -1,7 +1,6 @@
 import { Header } from './components/Header';
 import { ReactNode } from 'react';
 import { classy } from '@lib/utilities';
-import { ArticleList } from '@components/ArticleList';
 import resume from '@assets/resume.json';
 import { Article } from '@components/Article';
 
@@ -74,15 +73,14 @@ const Experience = () => {
 
 const Education = () => {
   const education = resume.education.sort((a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()).map((education) => ({
-    title: `${education.institution}\n${education.studyType}\n${education.area}`,
-    byline: `${education.startDate} - ${education.endDate}`,
-    content: education.courses.map((course) => '• ' + course).join('\n'),
+    title: `${education.studyType}\n${education.area}`,
+    byline: `${education.startDate} - ${education.endDate}, ${education.institution}`,
   }));
 
   return (
-    <div className="col-span-2 w-full">
+    <div className="col-span-6 w-full border-3 border-black p-5 h-fit">
       <CollapsableSection title="Education">
-        <div className="w-full">
+        <div className="grid grid-cols-2 gap-8 w-full">
           {education.map((entry, index) => (
             <Article key={index} {...entry} />
           ))}
@@ -121,9 +119,9 @@ const Volunteering = () => {
   }));
 
   return (
-    <div className="col-span-2 w-full">
+    <div className="col-span-4 w-full">
       <CollapsableSection title="Volunteering">
-        <div className="w-full">
+        <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full">
           {volunteering.map((entry, index) => (
             <Article key={index} {...entry} />
           ))}
@@ -167,6 +165,7 @@ const Home = async () => {
         <Education />
         <Awards />
         <Volunteering />
+        <div className="col-span-6 w-full h-1.5 bg-black" />
         <Projects />
       </div>
     </>
