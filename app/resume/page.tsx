@@ -20,7 +20,7 @@ const SkillsAndLanguages = () => {
   }));
 
   return (
-    <div className="md:border-3 md:border-black md:p-5 col-span-2 h-fit">
+    <div className="print:border-3 print:border-black print:p-5 md:border-3 md:border-black md:p-5 md:col-span-2 print:!col-span-2 col-span-6 h-fit">
       <CollapsableSection title="Skills">
         <div className="flex flex-col">
           {skills.map((entry, index) => (
@@ -48,7 +48,7 @@ const Experience = () => {
   }));
 
   return (
-    <div className="col-span-4 w-full">
+    <div className="md:col-span-4 print:!col-span-4 col-span-6 w-full">
       <CollapsableSection title="Experience">
         <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:!columns-2">
           {experience.map((entry, index) => (
@@ -67,7 +67,7 @@ const Education = () => {
   }));
 
   return (
-    <div className="col-span-6 w-full border-3 border-black p-5 h-fit">
+    <div className="col-span-6 w-full print:border-3 print:border-black print:p-5 md:border-3 md:border-black md:p-5 h-fit">
       <CollapsableSection title="Education">
         <div className="columns-1 md:columns-2 gap-8 w-full print:columns-2">
           {education.map((entry, index) => (
@@ -87,7 +87,7 @@ const Awards = () => {
   }));
 
   return (
-    <div className="col-span-2 w-full">
+    <div className="md:col-span-2 print:!col-span-2 col-span-6 w-full">
       <CollapsableSection title="Awards">
         <div className="w-full">
           {awards.map((entry, index) => (
@@ -108,7 +108,7 @@ const Volunteering = () => {
   }));
 
   return (
-    <div className="col-span-4 w-full">
+    <div className="md:col-span-4 print:!col-span-4 col-span-6 w-full">
       <CollapsableSection title="Volunteering">
         <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:columns-2">
           {volunteering.map((entry, index) => (
@@ -132,7 +132,7 @@ const Projects = () => {
     }));
 
   return (
-    <div className="col-span-6 w-full">
+    <div className="col-span-6 w-full print:!hidden">
       <CollapsableSection title="Projects">
         <div
           className="xl:columns-3 columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:columns-3">
@@ -156,7 +156,7 @@ const Home = async () => {
         <Education />
         <Awards />
         <Volunteering />
-        <div className="col-span-6 w-full print:border-none border-black border-b-6" />
+        <div className="col-span-6 w-full print:border-none border-black border-b-6 md:border-b-6 border-none" />
         <Projects />
       </div>
     </>

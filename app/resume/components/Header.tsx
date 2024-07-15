@@ -8,7 +8,7 @@ import { format } from 'date-fns';
 
 export const Header = () => {
   const onPrint = () => {
-    if (navigator.userAgent.includes('Safari')) {
+    if (navigator.vendor.includes('Apple')) {
       alert(`
 I'm so sorry! Safari didn't fix this bug for 17 years... 
 (https://bugs.webkit.org/show_bug.cgi?id=15546) 
