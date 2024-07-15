@@ -6,7 +6,7 @@ import { CollapsableSection } from './components/CollapsableSection';
 const RESUME_TYPE = 'Software Engineering';
 
 // TODO: Make it fully responsive
-// TODO: Make sure it works on Safari
+// TODO: Add collapsing button to sections
 
 const SkillsAndLanguages = () => {
   const stars = { 'Master': '★★★★★', 'Proficient': '★★★★', 'Intermediate': '★★★' };
@@ -20,7 +20,7 @@ const SkillsAndLanguages = () => {
   }));
 
   return (
-    <div className="border-3 border-black p-5 col-span-2 h-fit">
+    <div className="md:border-3 md:border-black md:p-5 col-span-2 h-fit">
       <CollapsableSection title="Skills">
         <div className="flex flex-col">
           {skills.map((entry, index) => (
@@ -50,7 +50,7 @@ const Experience = () => {
   return (
     <div className="col-span-4 w-full">
       <CollapsableSection title="Experience">
-        <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:columns-2">
+        <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:!columns-2">
           {experience.map((entry, index) => (
             <Article key={index} {...entry} />
           ))}
@@ -156,7 +156,7 @@ const Home = async () => {
         <Education />
         <Awards />
         <Volunteering />
-        {/*<div className="col-span-6 w-full print:border-none border-black border-b-6 print:page-break" />*/}
+        <div className="col-span-6 w-full print:border-none border-black border-b-6" />
         <Projects />
       </div>
     </>

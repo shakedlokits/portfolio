@@ -12,9 +12,9 @@
 
   .highlight {
     text-decoration-color: #FDFF9B;
-    text-decoration-thickness: 100%;
+    text-decoration-thickness: 0.8em;
     text-decoration-skip-ink: none;
-    text-underline-offset: -100%;
+    text-underline-offset: -0.4em;
     text-decoration-line: underline;
     mix-blend-mode: multiply;
     -webkit-box-decoration-break: clone;

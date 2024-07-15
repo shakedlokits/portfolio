@@ -6,36 +6,37 @@ import { classy } from '@lib/utilities';
 const isContentArray = (content: string | string[]): content is string[] => Array.isArray(content);
 
 const ArticleContent = ({ content }: { content: string | string[] }) => {
-  const shouldTruncate = (isContentArray(content) ? content.join('\n') : content).length > 250;
+  const concatenatedContent = isContentArray(content) ? content.join('\n') : content;
+  const shouldTruncate = concatenatedContent.length > 250;
+
   const spreadContent = isContentArray(content) ? (
-    <ul className="list-disc list-inside">
+    <ul key={concatenatedContent} className="list-disc list-inside whitespace-pre-line leading-none">
       {content.map((line, index) => (
-        <li key={`${line}-${index}`} className="mt-2">{line}</li>
+        <li key={`${concatenatedContent}-${index}`} className="mt-2">{line}</li>
       ))}
     </ul>
-  ) : content;
+  ) : (
+    <p key={concatenatedContent} className="text-sm break-word hyphens-auto mb-3 whitespace-pre-line leading-none">
+      {content}
+    </p>
+  );
 
   if (shouldTruncate) {
     return (
       <details className="group">
         <summary className="text-sm break-word hyphens-auto mb-3 first:list-none">
-          <p
+          <div
             className="group-open:line-clamp-none line-clamp-6 whitespace-pre-line print:line-clamp-none leading-none">
             {spreadContent}
-          </p>
+          </div>
           <p className="underline font-bold float-right group-open:hidden inline print:hidden mt-2 ">
             read more
           </p>
         </summary>
       </details>
     );
-
   } else {
-    return (
-      <p className="text-sm break-word hyphens-auto mb-3 whitespace-pre-line leading-none">
-        {spreadContent}
-      </p>
-    );
+    return spreadContent;
   }
 };
 
