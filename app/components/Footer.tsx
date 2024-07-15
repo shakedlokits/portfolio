@@ -12,7 +12,7 @@ const GiftIcon = () => (
 );
 
 export const Footer = () => (
-  <footer className="flex flex-row justify-between border-black border-t-2 mt-8 mb-4 py-2">
+  <footer className="flex flex-row justify-between border-black border-t-2 mt-8 mb-4 py-2 print:hidden">
     <p className="text-base">
       Built using{' '}
       <span className="font-bold">

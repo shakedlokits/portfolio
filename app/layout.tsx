@@ -15,7 +15,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html>
       <body>
         <FontProvider>
-          <div className="container mx-auto max-w-3xl px-9 pt-20 font-body">
+          <div className="container mx-auto max-w-3xl px-9 pt-20 font-body print:max-w-max print:p-0">
             {children}
             <Footer />
           </div>

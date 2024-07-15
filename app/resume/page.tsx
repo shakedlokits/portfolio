@@ -1,23 +1,12 @@
 import { Header } from './components/Header';
-import { ReactNode } from 'react';
-import { classy } from '@lib/utilities';
 import resume from '@assets/resume.json';
 import { Article } from '@components/Article';
+import { CollapsableSection } from './components/CollapsableSection';
 
 const RESUME_TYPE = 'Software Engineering';
 
-const CollapsableSection = ({ title, children, className }: {
-  title: string,
-  children: ReactNode,
-  className?: string
-}) => {
-  return (
-    <div className={classy('flex flex-col gap-1 w-full mb-3', className)} id={title.toLowerCase().replaceAll(' ', '-')}>
-      <h1 className="text-3xl italic font-bold leading-tight uppercase text-stroke pb-3">{title}</h1>
-      {children}
-    </div>
-  );
-};
+// TODO: Make it fully responsive
+// TODO: Make sure it works on Safari
 
 const SkillsAndLanguages = () => {
   const stars = { 'Master': '★★★★★', 'Proficient': '★★★★', 'Intermediate': '★★★' };
@@ -52,16 +41,16 @@ const SkillsAndLanguages = () => {
 
 const Experience = () => {
   const experience = resume.work.filter((work) => work.type === RESUME_TYPE).map((work) => ({
-    title: `${work.position}, ${work.name}`,
+    title: `${work.position.split(',')?.[0]}, ${work.name}`,
     byline: `${work.location?.split(',')[0] + ', ' ?? ''}${work.startDate} - ${work.endDate}`,
-    content: work.highlights?.map((highlight) => '• ' + highlight).join('\n'),
+    content: work.highlights,
     url: work.url,
   }));
 
   return (
     <div className="col-span-4 w-full">
       <CollapsableSection title="Experience">
-        <div className="columns-2 gap-8 w-full">
+        <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:columns-2">
           {experience.map((entry, index) => (
             <Article key={index} {...entry} />
           ))}
@@ -80,7 +69,7 @@ const Education = () => {
   return (
     <div className="col-span-6 w-full border-3 border-black p-5 h-fit">
       <CollapsableSection title="Education">
-        <div className="grid grid-cols-2 gap-8 w-full">
+        <div className="columns-1 md:columns-2 gap-8 w-full print:columns-2">
           {education.map((entry, index) => (
             <Article key={index} {...entry} />
           ))}
@@ -114,14 +103,14 @@ const Volunteering = () => {
   const volunteering = resume.volunteer.sort((a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime()).map((volunteer) => ({
     title: `${volunteer.position}, ${volunteer.organization}`,
     byline: `${volunteer.startDate} - ${volunteer.endDate}`,
-    content: volunteer.highlights.map((highlight) => '• ' + highlight).join('\n'),
+    content: volunteer.highlights,
     url: volunteer.url,
   }));
 
   return (
     <div className="col-span-4 w-full">
       <CollapsableSection title="Volunteering">
-        <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full">
+        <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:columns-2">
           {volunteering.map((entry, index) => (
             <Article key={index} {...entry} />
           ))}
@@ -136,16 +125,17 @@ const Projects = () => {
     .filter((project) => project.type === RESUME_TYPE)
     .sort((a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime())
     .map((project) => ({
-      title: `${project.name}, ${project.entity}`,
-      byline: `${project.startDate} - ${project.endDate}`,
-      content: `${project.description}\n\n${project.highlights.map((highlight) => '• ' + highlight).join('\n')}`,
+      title: `${project.name}`,
+      byline: `${project.startDate} - ${project.endDate}, ${project.entity}`,
+      content: project.highlights,
       url: project.url,
     }));
 
   return (
     <div className="col-span-6 w-full">
       <CollapsableSection title="Projects">
-        <div className="xl:columns-3 columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full">
+        <div
+          className="xl:columns-3 columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:columns-3">
           {projects.map((entry, index) => (
             <Article key={index} {...entry} />
           ))}
@@ -159,17 +149,20 @@ const Home = async () => {
   return (
     <>
       <Header />
-      <div className="grid grid-cols-6 gap-10">
+      <div className="grid grid-cols-6 gap-10 ">
         <SkillsAndLanguages />
         <Experience />
+        <div className="col-span-6 w-full page-break" />
         <Education />
         <Awards />
         <Volunteering />
-        <div className="col-span-6 w-full h-1.5 bg-black" />
+        {/*<div className="col-span-6 w-full print:border-none border-black border-b-6 print:page-break" />*/}
         <Projects />
       </div>
     </>
   );
 };
+
+
 
 export default Home;

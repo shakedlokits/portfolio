@@ -16,7 +16,7 @@ Title.TitleByline = function TitleByline({ byline }: { byline: string }) {
 
 Title.TitleBody = function TitleBody({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1]">
+    <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl print:!text-6xl leading-[1.1]">
       {children}
     </h1>
   );
