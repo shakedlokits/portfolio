@@ -39,7 +39,7 @@ Please use literally any other browser to print this page.
           </div>
           <p className="underline font-bold highlight cursor-pointer inline print:hidden"
              onClick={onPrint}>Print 🖨️</p>
-          <p className="hidden print:inline font-bold">Printed
+          <p className="hidden print:inline font-bold">Generated
             on {format(new Date(), 'MMMM do, yyyy')} at {new URL(resume.basics.url).hostname.slice(4)}/resume</p>
         </Menu.PrimaryRow>
         <Menu.SecondaryRow className="sm:flex hidden print:!hidden">
