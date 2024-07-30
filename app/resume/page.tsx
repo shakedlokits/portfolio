@@ -5,9 +5,6 @@ import { CollapsableSection } from './components/CollapsableSection';
 
 const RESUME_TYPE = 'Software Engineering';
 
-// TODO: Make it fully responsive
-// TODO: Add collapsing button to sections
-
 const SkillsAndLanguages = () => {
   const stars = { 'Master': '★★★★★', 'Proficient': '★★★★', 'Intermediate': '★★★' };
   const skills = resume.skills.map((skill) => ({
@@ -82,8 +79,7 @@ const Education = () => {
 const Awards = () => {
   const awards = resume.awards.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((award) => ({
     title: `${award.title}, ${award.awarder}`,
-    byline: `${award.date}`,
-    content: award.summary,
+    byline: `${award.date}`
   }));
 
   return (
@@ -100,7 +96,9 @@ const Awards = () => {
 };
 
 const Volunteering = () => {
-  const volunteering = resume.volunteer.sort((a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime()).map((volunteer) => ({
+  const volunteering = resume.volunteer
+    .filter((v) => v.type === RESUME_TYPE)
+    .sort((a, b) => new Date(b.endDate).getTime() - new Date(a.endDate).getTime()).map((volunteer) => ({
     title: `${volunteer.position}, ${volunteer.organization}`,
     byline: `${volunteer.startDate} - ${volunteer.endDate}`,
     content: volunteer.highlights,
@@ -152,7 +150,6 @@ const Home = async () => {
       <div className="grid grid-cols-6 gap-10 ">
         <SkillsAndLanguages />
         <Experience />
-        <div className="col-span-6 w-full page-break" />
         <Education />
         <Awards />
         <Volunteering />

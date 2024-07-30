@@ -10,7 +10,7 @@ const ArticleContent = ({ content }: { content: string | string[] }) => {
   const shouldTruncate = concatenatedContent.length > 250;
 
   const spreadContent = isContentArray(content) ? (
-    <ul key={concatenatedContent} className="list-disc list-inside whitespace-pre-line leading-none">
+    <ul key={concatenatedContent} className="list-disc list-inside whitespace-pre-line leading-none print:list-none print:list-outside">
       {content.map((line, index) => (
         <li key={`${concatenatedContent}-${index}`} className="mt-2">{line}</li>
       ))}
@@ -50,7 +50,7 @@ export const Article = ({ title, byline, content, cover, url, className }: {
 }) => {
   return (
     <article className={classy('flex flex-col gap-1 items-start relative break-inside-avoid-column', className)}>
-      <h2 className="font-display text-xl leading-tight mb-1 whitespace-pre-line">
+      <h2 className="font-display text-xl leading-tight mb-1 whitespace-pre-line print:text-lg print:leading-tight">
         {url ? <Link href={url} redirect>{title}</Link> : title}
       </h2>
       <span className="text-xs highlight font-header uppercase">

@@ -160,12 +160,10 @@
       "startDate": "2020",
       "endDate": "2023",
       "highlights": [
-        "Developed and managed various products using serverless architecture on AWS, employing services like Lambda, SQS, SNS, API Gateway, Fargate, and CloudFormation.",
-        "Led backend development with Node, Express, and Sequelize, and frontend development using React, Redux, Vite, Webpack, and ChakraUI.",
-        "Spearheaded the design of vendor management solutions and remodeling of vendor systems, establishing key engineering ownership over the vendors' side of Melio.",
-        "Contributed to diverse projects including international payments, Mastercard Billers directory, and Shopify UI integration.",
-        "Provided advisory support for projects such as QuickBooks sync and accountant receivables.",
-        "Actively mentored other engineers, guiding their career development and fostering a culture of teamwork and collaboration at Melio."
+        "Developed and managed various products using serverless architecture on AWS",
+        "Led the design of vendor management solutions and remodeling of vendor systems",
+        "Developed international payments, Mastercard directory, Shopify Bill-Pay, QuickBooks Sync and AR",
+        "Actively mentored other engineers in career development and fostering a culture of teamwork and collaboration"
       ],
       "url": "https://www.linkedin.com/company/meliopayments/",
       "location": "Tel Aviv, Israel",
@@ -178,8 +176,8 @@
       "endDate": "2021",
       "description": "Datahack is an Israeli non-profit dedicated to the advancement of data science and machine learning in Israel. We focus on strengthening academia-industry ties, data science literacy and education, intra-community cohesion and knowledge sharing and empowerment of underrepresented populations.",
       "highlights": [
-        "Managed the engineering team of Datahack.",
-        "Developed and maintained event management systems, data pipelines, and data visualization tools."
+        "Managed the engineering team of Datahack",
+        "Developed event management systems, data pipelines, and data visualization tools"
       ],
       "url": "https://www.linkedin.com/company/datahack/",
       "location": "Jerusalem, Israel",
@@ -192,8 +190,7 @@
       "endDate": "2020",
       "highlights": [
         "Developed an enterprise grade, high-load, zero-loss financial systems over RabbitMQ, Kubernetes, Go, Rails, Node and React",
-        "Created and deployed a production monitoring, logging and tracing infrastructure",
-        "Standardized a serverless host over Openwhisk"
+        "Created and deployed a production monitoring, logging and tracing infrastructure"
       ],
       "url": "https://www.linkedin.com/company/wework/",
       "location": "Tel Aviv, Israel",
@@ -218,9 +215,9 @@
       "startDate": "2018",
       "endDate": "2018",
       "highlights": [
-        "Researched, managed and developed a production-level, separable style transfer feature which imitates real-life craft processes.",
-        "Orchestrated an automated, visual quality, testing and verification system.",
-        "Designed the first multi-network AI-powered photo editing solution in the market."
+        "Researched and developed a production-level, style transfer feature which imitates real-life craft processes",
+        "Automated a visual quality, testing and verification system",
+        "Designed the first multi-network AI-powered photo editing solution in the market"
       ],
       "url": "https://www.linkedin.com/company/lightricks/",
       "location": "Jerusalem, Israel",
@@ -232,10 +229,8 @@
       "startDate": "2018",
       "endDate": "2018",
       "highlights": [
-        "Developed live production AI CRM and front facing experiences over a fully integrated Next.js, Apollo, Mongo, GraphQL stack",
-        "Introduced new work management methodologies in order to optimize proficiency",
-        "Trained and managed CRF models for free-form data extraction and chat comprehension",
-        "Developed expert-hybrid AI conversational agents without LLMs"
+        "Developed live production AI CRM and an expert-hybrid AI conversational agents without LLMs",
+        "Trained and managed CRF models for free-form data extraction and chat comprehension"
       ],
       "url": "https://www.linkedin.com/company/realfriendai/",
       "location": "Tel Aviv, Israel",
@@ -243,11 +238,11 @@
     },
     {
       "name": "Swedish Ministry of Education and Research",
-      "position": "Software Engineering Consultant",
+      "position": "Consultant",
       "startDate": "2018",
       "endDate": "2018",
       "highlights": [
-        "Consulted on the design, architecture and implementation of a generative, interactive, high-scale web application built for parents."
+        "Consulted on the design of a generative, high-scale web application built for parents"
       ],
       "url": "https://www.linkedin.com/company/utbildningsdepartementet-se/",
       "location": "Stockholm, Sweden",
@@ -261,7 +256,7 @@
       "location": "Raanana, Israel",
       "highlights": [
         "Designed, developed and managed a centralized code quality analysis and publishing framework and workflow",
-        "Worked with popular CI and virtualization tools such as: Jenkins, Docker, Ansible, Puppet, OpenShift, OpenStack and more, for deployment and automation purposes"
+        "Worked with popular CI and virtualization tools such as: Jenkins, Docker, Ansible, Puppet, OpenShift, OpenStack and more"
       ],
       "url": "https://www.linkedin.com/company/red-hat/",
       "type": "Software Engineering"
@@ -367,7 +362,8 @@
         "Mentored a student in the Moshal Program for a year.",
         "Provided guidance and support in their professional development, including networking, resume building, and interview preparation."
       ],
-      "url": "https://www.moshalscholarship.org"
+      "url": "https://www.moshalscholarship.org",
+      "type": "Software Engineering"
     },
     {
       "organization": "Public Diplomacy Project",
@@ -375,11 +371,11 @@
       "startDate": "2023",
       "endDate": "2024",
       "highlights": [
-        "Founded the Public Diplomacy Project, an organization numbers over 7000 members, dedicated to promoting public diplomacy and combating hate speech in the digital realm",
-        "Developed Words of Iron, a pioneering project with 1M that aims to address online hate-speech by empowering individuals to deliver factual information to key audiences",
-        "Led the development of Spark, a mobile app designed to gamify the mobilization of NGO activists, enhancing engagement and distribution of public affairs content",
-        "Consulted and coordinated public affairs initiatives for various NGOs"
-      ]
+        "Founded the Public Diplomacy Project, an organization numbers over 7000 members, dedicated to combating online hate speech",
+        "Developed Words of Iron, a pioneering project with 1M MAU's that aims to address online hate-speech by empowering individuals to deliver factual information to key audiences",
+        "Led the development of Spark, a mobile app designed to gamify the mobilization of NGO activists"
+      ],
+      "type": "Software Engineering"
     },
     {
       "organization": "Moshal Program",
@@ -389,9 +385,9 @@
       "endDate": "2023",
       "highlights": [
         "Served on the steering committee for 7 months to organize a Medical Innovation Hackathon for 130 diverse students",
-        "Mentored participants in tackling real-world HealthTech challenges, guiding them from ideation to implementation",
-        "Collaborated with Moshal Program alumni to foster an environment of innovation and support for the next generation of problem solvers"
-      ]
+        "Mentored participants in tackling real-world HealthTech challenges, guiding them from ideation to implementation"
+      ],
+      "type": "Software Engineering"
     },
     {
       "organization": "Datahack",
@@ -403,7 +399,8 @@
         "Managed the engineering team of Datahack.",
         "Developed and maintained event management systems, data pipelines, and data visualization tools."
       ],
-      "url": "https://www.linkedin.com/company/datahack/"
+      "url": "https://www.linkedin.com/company/datahack/",
+      "type": "Software Engineering"
     },
     {
       "organization": "Side Project Club",
@@ -415,7 +412,8 @@
         "Mentored members in various side-projects, including a data science project, a web development project, and a mobile app project",
         "Provided guidance and support to members in selecting projects, setting goals, and overcoming challenges",
         "Collaborated with members to develop their portfolios and showcase their projects on LinkedIn"
-      ]
+      ],
+      "type": "Software Engineering"
     },
     {
       "organization": "Bezalel Academy of Art and Design",
@@ -425,7 +423,8 @@
       "highlights": [
         "Mentored students and aided in the development of multiple final projects.",
         "Projects included interactive installations, game design, print design, digital art, web design and more."
-      ]
+      ],
+      "type": "Software Engineering"
     },
     {
       "organization": "2011 Israeli Social Justice Movement",
@@ -436,7 +435,8 @@
         "Designed multiple mass-media public affairs campaigns",
         "Managed the digital marketing team of the 2011 Israeli Social Justice Movement",
         "Drew half a million people to the streets of Tel Aviv"
-      ]
+      ],
+      "type": "Design"
     }
   ],
   "projects": [
