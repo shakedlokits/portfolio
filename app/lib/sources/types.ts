@@ -2,6 +2,7 @@ export enum FeedType {
   Behance = 'behance',
   Github = 'github',
   Medium = 'medium',
+  Collaboration = 'collaboration',
 }
 
 export interface FeedEntry {

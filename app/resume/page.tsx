@@ -3,6 +3,7 @@ import resume from '@assets/resume.json';
 import { Article } from '@components/Article';
 import { CollapsableSection } from './components/CollapsableSection';
 
+// TODO: Add resume type filter option (or AI based)
 const RESUME_TYPE = 'Software Engineering';
 
 const SkillsAndLanguages = () => {

@@ -17,9 +17,9 @@ const transformFeedEntryToArticle = (feedEntries: FeedEntry[]): Parameters<typeo
 };
 
 const Home = async () => {
-  const { articles, works, projects } = await getArticles();
+  const { articles, works, projects, collaboration } = await getArticles();
   const stock = await getStockData('IVV');
-  const entries = transformFeedEntryToArticle(shuffleEntries([...articles, ...works, ...projects]).filter((e) => !e.title.includes('portfolio')));
+  const entries = transformFeedEntryToArticle(shuffleEntries([...articles, ...works, ...projects, ...collaboration]).filter((e) => !e.title.includes('portfolio')));
 
   return (
     <>

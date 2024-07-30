@@ -8,7 +8,8 @@ const nextConfig = {
       'raw.githubusercontent.com',
       'user-images.githubusercontent.com',
       'opengraph.githubassets.com',
-      'mir-s3-cdn-cf.behance.net'
+      'mir-s3-cdn-cf.behance.net',
+      'static.wixstatic.com'
     ]
   },
   experimental: {

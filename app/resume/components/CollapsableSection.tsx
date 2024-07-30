@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { classy } from '@lib/utilities';
 
+// TODO: Add collapsing button to sections
 export const CollapsableSection = ({ title, children, className }: {
   title: string,
   children: ReactNode,

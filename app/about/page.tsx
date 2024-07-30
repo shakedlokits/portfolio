@@ -1,6 +1,7 @@
 import me from '../assets/me.jpg';
 import Image from 'next/image'
 import { Header } from '@components/Header';
+import { Link } from '@components/Link';
 
 const About = () => {
   return (
@@ -22,6 +23,9 @@ const About = () => {
         When I’m not obsessing about content generation, you would usually find me sailing somewhere, motorcycling a
         mountain or wondering around looking for something new to eat.
       </p>
+      <br/>
+      <Link href={'/resume'} className='underline font-bold'>Check out my resume</Link>
+      <br/>
       <br/>
       <div className='block'>
         <Image src={me} alt="Picture of the author" width={384} height={512}/>

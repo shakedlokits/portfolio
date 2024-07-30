@@ -84,7 +84,7 @@ const HeaderMenu = ({ stock }: { stock: StockData }) => {
         <p className="inline text-[1rem]">{weather}</p>
       </Menu.PrimaryRow>
       <Menu.SecondaryRow>
-        <Link href={'/about'} >Editor&apos;s Note</Link>
+        <Link href={'/about'} >About Me</Link>
         <Link href="https://www.linkedin.com/in/shaked-lokits/" redirect className="sm:inline hidden">
           Contact Me
         </Link>
