@@ -1,8 +1,8 @@
 import './global.css';
 import { Analytics } from '@vercel/analytics/react';
-import { FontProvider } from './assets/fonts';
-import { Footer } from './components/Footer';
-import { Title } from './components/Title';
+import { FontProvider } from '@assets/fonts';
+import { Footer } from '@components/Footer';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -21,6 +21,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </FontProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
