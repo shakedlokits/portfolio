@@ -1,3 +1,5 @@
+'use server';
+
 import { Header } from './components/Header';
 import resume from '@assets/resume.json';
 import { Article } from '@components/Article';
@@ -22,6 +24,7 @@ const SkillsAndLanguages = () => {
       <CollapsableSection title="Skills">
         <div className="flex flex-col">
           {skills.map((entry, index) => (
+            // @ts-expect-error Server Component
             <Article key={index} {...entry} />
           ))}
         </div>
@@ -29,6 +32,7 @@ const SkillsAndLanguages = () => {
       <CollapsableSection title="Languages">
         <div className="flex flex-col">
           {languages.map((entry, index) => (
+            // @ts-expect-error Server Component
             <Article key={index} {...entry} />
           ))}
         </div>
@@ -50,6 +54,7 @@ const Experience = () => {
       <CollapsableSection title="Experience">
         <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:!columns-2">
           {experience.map((entry, index) => (
+            // @ts-expect-error Server Component
             <Article key={index} {...entry} />
           ))}
         </div>
@@ -69,6 +74,7 @@ const Education = () => {
       <CollapsableSection title="Education">
         <div className="columns-1 md:columns-2 gap-8 w-full print:columns-2">
           {education.map((entry, index) => (
+            // @ts-expect-error Server Component
             <Article key={index} {...entry} />
           ))}
         </div>
@@ -88,6 +94,7 @@ const Awards = () => {
       <CollapsableSection title="Awards">
         <div className="w-full">
           {awards.map((entry, index) => (
+            // @ts-expect-error Server Component
             <Article key={index} {...entry} />
           ))}
         </div>
@@ -111,6 +118,7 @@ const Volunteering = () => {
       <CollapsableSection title="Volunteering">
         <div className="columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:columns-2">
           {volunteering.map((entry, index) => (
+            // @ts-expect-error Server Component
             <Article key={index} {...entry} />
           ))}
         </div>
@@ -136,6 +144,7 @@ const Projects = () => {
         <div
           className="xl:columns-3 columns-1 md:columns-2 gap-12 columns-rule [column-rule-width:3px] w-full print:columns-3">
           {projects.map((entry, index) => (
+            // @ts-expect-error Server Component
             <Article key={index} {...entry} />
           ))}
         </div>
