@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
+    minimumCacheTTL: 60 * 60 * 24,
     remotePatterns: [
       {
         protocol: 'https',
