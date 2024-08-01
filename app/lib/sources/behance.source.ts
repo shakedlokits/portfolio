@@ -1,5 +1,6 @@
 import { createLogger } from '@lib/utilities/logger';
 import { FeedType, FeedEntry } from './types';
+import { fromUnixTime } from 'date-fns';
 
 const logger = createLogger('sources');
 
@@ -84,7 +85,7 @@ export const getBehanceWorks = async () => {
   
         return {
           link: url,
-          date: new Date(published_on).toISOString(),
+          date: fromUnixTime(published_on).toISOString(),
           title: name,
           content: description,
           snippet: description,
