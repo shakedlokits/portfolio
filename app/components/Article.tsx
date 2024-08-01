@@ -2,6 +2,7 @@
 import { Link } from './Link';
 import Image from 'next/image';
 import { classy } from '@lib/utilities';
+import { getImageSize } from '@lib/server';
 
 const isContentArray = (content: string | string[]): content is string[] => Array.isArray(content);
 
@@ -40,7 +41,7 @@ const ArticleContent = ({ content }: { content: string | string[] }) => {
   }
 };
 
-export const Article = ({ title, byline, content, cover, url, className }: {
+export const Article = async ({ title, byline, content, cover, url, className }: {
   title: string;
   byline: string;
   content?: string | string[];
@@ -48,6 +49,8 @@ export const Article = ({ title, byline, content, cover, url, className }: {
   url?: string;
   className?: string;
 }) => {
+  const imageSize = cover ? await getImageSize(cover) : undefined;
+
   return (
     <article className={classy('flex flex-col gap-1 items-start relative break-inside-avoid-column', className)}>
       <h2 className="font-display text-xl leading-tight mb-1 whitespace-pre-line print:text-lg print:leading-tight">
@@ -62,7 +65,14 @@ export const Article = ({ title, byline, content, cover, url, className }: {
           <ArticleContent content={content} />
         </>
       )}
-      {cover && <Image fill sizes="100%" className="!relative w-full" src={cover} alt={title} priority />}
+      {cover && <Image
+        sizes="100%"
+        className="!relative w-full"
+        src={cover}
+        alt={title}
+        width={imageSize?.width}
+        height={imageSize?.height}
+      />}
       <div className="border-black border-b-3 block relative w-full mb-4 mt-2" />
     </article>
   );
