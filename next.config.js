@@ -3,18 +3,45 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      'cdn-images-1.medium.com', 
-      'raw.githubusercontent.com',
-      'user-images.githubusercontent.com',
-      'opengraph.githubassets.com',
-      'mir-s3-cdn-cf.behance.net',
-      'static.wixstatic.com'
-    ]
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn-images-1.medium.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'user-images.githubusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'opengraph.githubassets.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'mir-s3-cdn-cf.behance.net',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.wixstatic.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
-  experimental: {
-    serverActions: true,
-  },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
