@@ -1,27 +1,27 @@
-import {
-  FeedEntry,
-  FeedType,
-  getBehanceWorks,
-  getGithubProjects,
-  getCollaborationArticles,
-  getMediumArticles,
-} from '@lib/sources';
+import type { ArticleList } from '@components/ArticleList';
+import type { FeedEntry, FeedType } from '@lib/sources';
+import { format } from 'date-fns';
+import { shuffleEntries } from '@lib/utilities';
+import { getArticleFeeds } from '@lib/server/get-article-feeds';
 
-export const getArticles = async (): Promise<{
-  projects: (FeedEntry & { type: FeedType.Github })[];
-  works: (FeedEntry & { type: FeedType.Behance })[];
-  articles: (FeedEntry & { type: FeedType.Medium })[];
-  collaboration: (FeedEntry & { type: FeedType.Collaboration })[];
-}> => {
-  const projects = await getGithubProjects();
-  const works = await getBehanceWorks();
-  const articles = await getMediumArticles();
-  const collaboration = await getCollaborationArticles();
+const transformFeedEntryToArticle = (feedEntries: FeedEntry[]): Parameters<typeof ArticleList>[0]['articles'] => {
+  return feedEntries.map((article) => ({
+    title: article.title,
+    byline: `${article.type}, ${format(new Date(article.date), 'MMM do, yyyy')}`,
+    content: article.snippet,
+    cover: article.cover,
+    url: article.link,
+  }));
+};
 
-  return {
-    projects,
-    works,
-    articles,
-    collaboration,
-  };
+
+export const getArticles = async (type?: FeedType): Promise<Parameters<typeof ArticleList>[0]['articles']> => {
+  const { articles, works, projects, collaboration } = await getArticleFeeds();
+
+  const shuffledFeeds = shuffleEntries([...articles, ...works, ...projects, ...collaboration]);
+  const filteredFeeds = shuffledFeeds
+    .filter((e) => !e.title.includes('portfolio'))
+    .filter((e) => type ? e.type === type : true);
+
+  return transformFeedEntryToArticle(filteredFeeds);
 };

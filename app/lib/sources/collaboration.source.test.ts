@@ -1,6 +1,6 @@
-import { getCollaborationArticles } from './manual.source';
+import { getCollaborationArticles } from './collaboration.source';
 
-it('get manual articles', async () => {
+it('get collaboration articles', async () => {
   const articles = await getCollaborationArticles();
 
   expect(articles.length).toBeGreaterThan(0);

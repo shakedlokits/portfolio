@@ -1,4 +1,5 @@
 'use client';
+
 import format from 'date-fns/format';
 import { Link } from './Link';
 import { useCountry, useWttr } from '@lib/hooks';
@@ -6,6 +7,8 @@ import { Menu } from '@components/Menu';
 import { Title } from '@components/Title';
 import type { StockData } from '@lib/server';
 import Typewriter from 'typewriter-effect';
+import { FeedType } from '@lib/sources';
+import { useRouter } from 'next/navigation';
 
 const formatTicker = ({ uplift }: StockData) => {
   const { sign, arrow, color } = (() => {
@@ -66,10 +69,13 @@ const HeaderTitle = () => {
 const HeaderMenu = ({ stock }: { stock: StockData }) => {
   const weather = useWttr();
   const country = useCountry();
+  const router = useRouter();
 
   const day = `${country}, ${format(new Date(), 'eeee')}, `;
   const date = format(new Date(), 'MMMM d, yyyy');
   const { ticker, tickerColor } = formatTicker(stock);
+
+  const feedTypes = Object.values(FeedType);
 
   return (
     <Menu>

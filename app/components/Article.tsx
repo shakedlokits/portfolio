@@ -62,7 +62,7 @@ export const Article = ({ title, byline, content, cover, url, className }: {
           <ArticleContent content={content} />
         </>
       )}
-      {cover && <Image fill sizes="100vw" className="!relative w-full" src={cover} alt={title} />}
+      {cover && <Image fill sizes="100%" className="!relative w-full" src={cover} alt={title} priority />}
       <div className="border-black border-b-3 block relative w-full mb-4 mt-2" />
     </article>
   );
