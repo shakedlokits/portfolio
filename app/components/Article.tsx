@@ -2,7 +2,6 @@
 import { Link } from './Link';
 import Image from 'next/image';
 import { classy } from '@lib/utilities';
-import { getImageSize } from '@lib/server';
 
 const isContentArray = (content: string | string[]): content is string[] => Array.isArray(content);
 
@@ -49,7 +48,7 @@ export const Article = async ({ title, byline, content, cover, url, className }:
   url?: string;
   className?: string;
 }) => {
-  const imageSize = cover ? await getImageSize(cover) : undefined;
+  // const imageSize = cover ? await getImageSize(cover) : undefined;
 
   return (
     <article className={classy('flex flex-col gap-1 items-start relative break-inside-avoid-column', className)}>
@@ -65,14 +64,7 @@ export const Article = async ({ title, byline, content, cover, url, className }:
           <ArticleContent content={content} />
         </>
       )}
-      {cover && <Image
-        sizes="100%"
-        className="!relative w-full"
-        src={cover}
-        alt={title}
-        width={imageSize?.width}
-        height={imageSize?.height}
-      />}
+      {cover && <Image fill sizes="100%" className="!relative w-full" src={cover} alt={title} />}
       <div className="border-black border-b-3 block relative w-full mb-4 mt-2" />
     </article>
   );
