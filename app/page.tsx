@@ -10,7 +10,7 @@ const Home = async () => {
   return (
     <>
       <Header stock={stock} menu />
-      <ArticleList articles={entries} />
+      <ArticleList articles={entries} columnSettings={{ numberOfColumns: 3, hasColumnRule: true }} />
     </>
   );
 };
