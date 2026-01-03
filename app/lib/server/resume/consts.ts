@@ -22,7 +22,7 @@ export const RESUME_ARTICLE_MAPS = {
       .filter((work) => parameters.filter === ResumeFilter.All || work.type === parameters.filter)
       .map((work) => ({
         title: `${work.position.split(',')?.[0]}, ${work.name}`,
-        byline: `${work.location?.split(',')[0] + ', ' ?? ''}${work.startDate} - ${work.endDate}`,
+        byline: `${work.location ? work.location.split(',')[0] + ', ' : ''}${work.startDate} - ${work.endDate}`,
         content: work.highlights,
         url: work.url,
       }));

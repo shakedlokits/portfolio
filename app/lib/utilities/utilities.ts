@@ -40,4 +40,4 @@ export const cacheOperation = async <T extends (...args: any[]) => Promise<strin
   return newResult;
 };
 
-export const classy: typeof classNames = (...args) => twMerge(classNames(args));
+export const classy = (...args: Parameters<typeof classNames>) => twMerge(classNames(...args));
