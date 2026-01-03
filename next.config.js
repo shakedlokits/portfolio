@@ -55,6 +55,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'pic1.calcalist.co.il',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
