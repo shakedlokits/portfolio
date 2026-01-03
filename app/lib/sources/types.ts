@@ -3,6 +3,7 @@ export enum FeedType {
   Github = 'github',
   Medium = 'medium',
   Collaboration = 'collaboration',
+  Substack = 'substack',
 }
 
 export interface FeedEntry {

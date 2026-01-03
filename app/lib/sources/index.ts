@@ -4,3 +4,4 @@ export { getBehanceWorks } from './behance.source';
 export { getGithubProjects } from './github.source';
 export { getMediumArticles } from './medium.source';
 export { getCollaborationArticles } from './collaboration.source';
+export { getSubstackPosts } from './substack.source';

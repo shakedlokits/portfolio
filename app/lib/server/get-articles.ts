@@ -14,14 +14,13 @@ const transformFeedEntryToArticle = (feedEntries: FeedEntry[]): Parameters<typeo
   }));
 };
 
-
 export const getArticles = async (type?: FeedType): Promise<Parameters<typeof ArticleList>[0]['articles']> => {
-  const { articles, works, projects, collaboration } = await getArticleFeeds();
+  const { articles, works, projects, collaboration, posts } = await getArticleFeeds();
 
-  const shuffledFeeds = shuffleEntries([...articles, ...works, ...projects, ...collaboration]);
+  const shuffledFeeds = shuffleEntries([...articles, ...works, ...projects, ...collaboration, ...posts]);
   const filteredFeeds = shuffledFeeds
     .filter((e) => !e.title.includes('portfolio'))
-    .filter((e) => type ? e.type === type : true);
+    .filter((e) => (type ? e.type === type : true));
 
   return transformFeedEntryToArticle(filteredFeeds);
 };
