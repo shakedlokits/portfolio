@@ -5,9 +5,9 @@ export const useCountry = (): string => {
 
   useEffect(() => {
     const fetchLocation = async () => {
-      const res = await fetch('https://freeipapi.com/api/json', { cache: 'force-cache' });
+      const res = await fetch('https://ipapi.co/json/', { cache: 'force-cache' });
       const data = await res.json();
-      setCountry(data.countryName);
+      setCountry(data.country_name);
     };
     void fetchLocation();
   }, []);

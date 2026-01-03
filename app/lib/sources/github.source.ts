@@ -34,6 +34,12 @@ export const getGithubProjects = async (): Promise<(FeedEntry & { type: FeedType
       },
     });
 
+    if (!response.ok) {
+      const error = await response.json();
+      logger.error({ status: response.status, message: error.message }, 'GitHub API error');
+      return [];
+    }
+
     const json = await response.json();
     const repositories = json.filter(
       (repo: any) => repo.archived === false && repo.fork === false && repo.visibility === 'public'
