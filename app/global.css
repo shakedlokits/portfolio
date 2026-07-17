@@ -1,65 +1,78 @@
 /* Importing base styles for tailwind */
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Theme */
+@theme {
+	--container-4xs: 11.5rem;
+	--container-xs: 18.75rem;
+	--container-3xl: 56rem;
+
+	--text-5xl: 2.9rem;
+	--text-6xl: 3.875rem;
+
+	--leading-tight: 1.2;
+
+	--border-width-3: 3px;
+	--border-width-6: 6px;
+}
+
+@theme inline {
+	--font-display: var(--font-youngserif), serif;
+	--font-body: var(--font-junicode), sans-serif;
+	--font-header: var(--font-oswald), serif;
+}
 
 /* Custom styles */
-@layer utilities {
-  .columns-rule {
-    column-rule: 2px solid black;
-  }
+@utility highlight {
+	text-decoration-color: #FDFF9B;
+	text-decoration-thickness: 0.8em;
+	text-decoration-skip-ink: none;
+	text-underline-offset: -0.4em;
+	text-decoration-line: underline;
+	mix-blend-mode: multiply;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 
-  .highlight {
-    text-decoration-color: #FDFF9B;
-    text-decoration-thickness: 0.8em;
-    text-decoration-skip-ink: none;
-    text-underline-offset: -0.4em;
-    text-decoration-line: underline;
-    mix-blend-mode: multiply;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-  }
+	&::after {
+		content: "\00a0";
+	}
+}
 
-  .highlight::after {
-    content: "\00a0";
-  }
+@utility text-stroke {
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+}
 
-  .text-stroke {
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-  }
-
-  .page-break {
-    page-break-before: always;
-  }
+@utility columns-rule {
+	column-rule: 2px solid black;
 }
 
 /* Summary resets */
 summary::-webkit-details-marker {
-  display: none;
+	display: none;
 }
 
 summary::marker {
-  display: none;
+	display: none;
 }
 
 /* Typewriter resets */
 .Typewriter {
-  display: inline;
+	display: inline;
 }
 
 /* Print styles */
 @media print {
-  @page {
-    size: a4 portrait;
-    margin: 2rem;
-  }
+	@page {
+		size: a4 portrait;
+		margin: 2rem;
+	}
 
-  html, body {
-    width: 1000px;
-    padding: 0;
-    margin: 0 auto;
-    font-size: 14pt;
-  }
+	html,
+	body {
+		width: 1000px;
+		padding: 0;
+		margin: 0 auto;
+		font-size: 14pt;
+	}
 }
