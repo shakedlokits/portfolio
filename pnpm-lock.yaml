@@ -1,3 +1,97 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies: {}
+    packageManagerDependencies:
+      '@pnpm/exe':
+        specifier: ^10.27.0
+        version: 10.34.5
+      pnpm:
+        specifier: ^10.27.0
+        version: 10.34.5
+
+packages:
+
+  '@pnpm/exe@10.34.5':
+    resolution: {integrity: sha512-u2moSd4OWIszfle+clb+i04fD2lSWYHyrOLjEoJfM9WFtdgkWBFGq1sdnRvH/1KsEyglmIz3daC7cdqu+uz59w==}
+    hasBin: true
+
+  '@pnpm/linux-arm64@10.34.5':
+    resolution: {integrity: sha512-sV8iFna/MN7BMDuBmAEJqhzlywAoJ8LXXjrMR3IkeoDtP9PBY5j/AkGHa9woVDZMAEIAMxWV7sBnyPxiN5ByGA==}
+    cpu: [arm64]
+    os: [linux]
+    hasBin: true
+
+  '@pnpm/linux-x64@10.34.5':
+    resolution: {integrity: sha512-blNFcW3EVmOkeZYnkY5lraD1+oqiFvSByMT3GTRGKp7P7C4PtHixLQJLe2AzJ4rLimFjgqfHg0Cf/Si/9bZlHQ==}
+    cpu: [x64]
+    os: [linux]
+    hasBin: true
+
+  '@pnpm/macos-arm64@10.34.5':
+    resolution: {integrity: sha512-Uxvslz0yx/IICmP0EoGs+H9j4cA3JXV0mjtvAOisht0y/FCjS1GkGj8BA+EudDwmc9vsgtOrnq6tRFRluCsIsA==}
+    cpu: [arm64]
+    os: [darwin]
+    hasBin: true
+
+  '@pnpm/macos-x64@10.34.5':
+    resolution: {integrity: sha512-KrvYm3ArCMCT/rZnBUYPC6phvWxowpgJzIa/19UY4/2GL0L4CGUX8sGB30qI1lae1numn/6s2VkSCFF4VrZuyg==}
+    cpu: [x64]
+    os: [darwin]
+    hasBin: true
+
+  '@pnpm/win-arm64@10.34.5':
+    resolution: {integrity: sha512-r7fdkZEmIJzXXZMrOfu2j2sUmLlLvuXVJ48NER6bT/UtaIIZYXTUNy6/ejYLxf2PBqyOruhjYmVqkJthk6v1yA==}
+    cpu: [arm64]
+    os: [win32]
+    hasBin: true
+
+  '@pnpm/win-x64@10.34.5':
+    resolution: {integrity: sha512-bMjuj4KrPeqLqb66AS1ABqbbjow3JW0odFil70HC+PAwVM0meACH2Alv3IfrrxKgoO/yqCpOIttesT/tVbsOSA==}
+    cpu: [x64]
+    os: [win32]
+    hasBin: true
+
+  pnpm@10.34.5:
+    resolution: {integrity: sha512-pO4F8vc2WCVb1qiYWcBlpFwopX2u+uLIk6Fo7itzFow3uR6D5X6mdlStA/AwMXRkMOi84442LgQmBfuKvIAZLg==}
+    engines: {node: '>=18.12'}
+    hasBin: true
+
+snapshots:
+
+  '@pnpm/exe@10.34.5':
+    optionalDependencies:
+      '@pnpm/linux-arm64': 10.34.5
+      '@pnpm/linux-x64': 10.34.5
+      '@pnpm/macos-arm64': 10.34.5
+      '@pnpm/macos-x64': 10.34.5
+      '@pnpm/win-arm64': 10.34.5
+      '@pnpm/win-x64': 10.34.5
+
+  '@pnpm/linux-arm64@10.34.5':
+    optional: true
+
+  '@pnpm/linux-x64@10.34.5':
+    optional: true
+
+  '@pnpm/macos-arm64@10.34.5':
+    optional: true
+
+  '@pnpm/macos-x64@10.34.5':
+    optional: true
+
+  '@pnpm/win-arm64@10.34.5':
+    optional: true
+
+  '@pnpm/win-x64@10.34.5':
+    optional: true
+
+  pnpm@10.34.5: {}
+
+---
 lockfileVersion: '9.0'
 
 settings:
@@ -84,6 +178,9 @@ importers:
       jest-environment-jsdom:
         specifier: ^30.4.1
         version: 30.4.1
+      node:
+        specifier: runtime:^24.18.0
+        version: runtime:24.18.0
       postcss:
         specifier: ^8.5.19
         version: 8.5.19
@@ -2646,6 +2743,96 @@ packages:
   node-releases@2.0.51:
     resolution: {integrity: sha512-wRNIrw4DmVLKQlbgOMdkMx27Wrpzes2hh5Jtbi2bjPd+4wJstWIqP5A+lscnqbm0xxmT5Bpg8Lec5ItEBwx6BQ==}
     engines: {node: '>=18'}
+
+  node@runtime:24.18.0:
+    resolution:
+      type: variations
+      variants:
+        - resolution:
+            archive: tarball
+            bin: bin/node
+            integrity: sha256-ZGOiNzn2sjAOvsXM1gJ14TjjhY/Br8bo+bxOT2pLdvo=
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-aix-ppc64.tar.gz
+          targets:
+            - cpu: ppc64
+              os: aix
+        - resolution:
+            archive: tarball
+            bin: bin/node
+            integrity: sha256-4al+FMmcgD6WxzOUAyguoFpJnDL42D3v6e9exm+XntE=
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-darwin-arm64.tar.gz
+          targets:
+            - cpu: arm64
+              os: darwin
+        - resolution:
+            archive: tarball
+            bin: bin/node
+            integrity: sha256-39Db0+chUDQ033tyBecZ9hs6OjGyvPlym4uR/qJA8IA=
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-darwin-x64.tar.gz
+          targets:
+            - cpu: x64
+              os: darwin
+        - resolution:
+            archive: tarball
+            bin: bin/node
+            integrity: sha256-a0SEwhkCdBdd+aqPKOLXWKgZyxwf5qtIHi+VtGOrhQg=
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-linux-arm64.tar.gz
+          targets:
+            - cpu: arm64
+              os: linux
+        - resolution:
+            archive: tarball
+            bin: bin/node
+            integrity: sha256-/hM4ly95KDxrwh5h2/RXa76MBa3tKZnUHIZDrTAmUUI=
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-linux-ppc64le.tar.gz
+          targets:
+            - cpu: ppc64le
+              os: linux
+        - resolution:
+            archive: tarball
+            bin: bin/node
+            integrity: sha256-Nx68E5RfwWlJPnUvLdr6+rbs2My0Ubz/RuCfacXdjHo=
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-linux-s390x.tar.gz
+          targets:
+            - cpu: s390x
+              os: linux
+        - resolution:
+            archive: tarball
+            bin: bin/node
+            integrity: sha256-eDEwmElj23upy9AQierywu+wVcfBaTyUMXS5Z7MFDLg=
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-linux-x64.tar.gz
+          targets:
+            - cpu: x64
+              os: linux
+        - resolution:
+            archive: zip
+            bin: node.exe
+            integrity: sha256-8nRmmtuTsf0Pv48h/QeGCencyEMz1PJxjS3eP5oWGgE=
+            prefix: node-v24.18.0-win-arm64
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-win-arm64.zip
+          targets:
+            - cpu: arm64
+              os: win32
+        - resolution:
+            archive: zip
+            bin: node.exe
+            integrity: sha256-CuaEBrQtdyVmHal5sUA+yZJtogXGdwgn8zqsnY8m6CE=
+            prefix: node-v24.18.0-win-x64
+            type: binary
+            url: https://nodejs.org/download/release/v24.18.0/node-v24.18.0-win-x64.zip
+          targets:
+            - cpu: x64
+              os: win32
+    version: 24.18.0
+    hasBin: true
 
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
@@ -6356,6 +6543,8 @@ snapshots:
   node-int64@0.4.0: {}
 
   node-releases@2.0.51: {}
+
+  node@runtime:24.18.0: {}
 
   normalize-path@3.0.0: {}
 
