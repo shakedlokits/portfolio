@@ -5,6 +5,18 @@
 	"license": "GPL-3.0",
 	"private": true,
 	"type": "module",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11.6.0",
+			"onFail": "download"
+		},
+		"runtime": {
+			"name": "node",
+			"version": "^24.18.0",
+			"onFail": "download"
+		}
+	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
